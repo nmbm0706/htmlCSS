@@ -7,33 +7,43 @@
   <title>Document</title>
   <style>
     @font-face {
-      font-family: '명조';
-      src: url(/font/NanumMyeongjoBold.ttf);
-    }
-    @font-face {
-      font-family: '고딕';
-      src: url(/font/NanumGothicBold.ttf);
+      font-family: '아리타부리';
+      src: url(font/Arita-buriB.otf);
     }
     @font-face {
       font-family: '돋움';
       src: url(/font/gulim.ttc);
     }
-    .info{width: 1280px; height: 900px; position: relative;
-    margin: 0 auto; background-color: antiquewhite;}
-    .left{width: 50%; left: 0;}
-    .right{width: 50%; position: absolute; left: 500px; top: 10%;}
-    img{border-radius: 50px;}
-    h1{font-family: '명조'; font-weight: bolder; font-size: xx-large; 
-    color: saddlebrown;}
-    p{font-family: '고딕', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 700; font-size: large;}
-    .hi{font-family: '돋움'; font-size: medium; font-size: medium;}
+    @font-face {
+      font-family: '맑은 고딕';
+      src: url(font/malgunbd.ttf);
+    }
+    .info{width: 1400px; position: relative; margin: 0 auto;}
+    .bg1{width: 1400px; height: 1100px; background-color: #fbf8f1; position: absolute;
+    margin: 0 auto; border-radius: 50px; top: 50px;}
+    .left{width: 40%; left: -50px; position: relative ; z-index: 3; 
+    filter: drop-shadow(10px 6px 6px #c3c3c3);}
+    .right{width: 50%; position: absolute; left: 500px; top: 30%; z-index: 2;}
+    .one{border-radius: 50px;}
+    h1{font-family: '아리타부리'; font-weight: bold; font-size: 46px; 
+    color: #471d04;}
+    p{font-family:'돋움', Helvetica, sans-serif, '맑은 고딕';
+    font-weight: bold; font-size: 26px;}
+    .hi{font-family: '돋움', Helvetica, sans-serif, '맑은 고딕'; 
+    font-size: medium; font-size: 16px;}
+    .bg2{position: absolute; top: 40%; left: 90px; z-index: 1;}
+    .bg3{position: absolute; bottom: 0; right: 0;}
+    .people{position: absolute; bottom: 0; left: -70px;}
   </style>
 </head>
 <body>
   <div class="info">
+    <div class="bg1">
+      <div class="people"><img src="/images/cheong_ju_people.png" alt="일러스트"></div>
+      <div class="bg3"><img src="/images/cheong_ju circle2.png" alt="원2"></div>
+    </div>
     <div class="left">
-      <img src="images/cheong_ju.png" alt="청주시장">
+      <img class="one" src="images/cheong_ju.png" alt="청주시장">
     </div>
     <div class="right">
       <h1>존경하는 88만 청주시민 여러분!</h1>
@@ -57,6 +67,8 @@
           미래 100만 자족도시 청주를 향해<br>
           모두 함께 힘차게 나아갑시다.</p>
     </div>
+      <div class="bg2"><img src="/images/cheong_ju circle.png" alt="원"></div>
   </div>
+
 </body>
 </html>

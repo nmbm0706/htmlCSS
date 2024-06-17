@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer-script minSpecVersion="1.000000" authoringTool="com.apple.PackageMaker" authoringToolVersion="3.0.6" authoringToolBuild="201">
+    <title>Arita-Buri</title>
+    <options customize="allow" allow-external-scripts="no" rootVolumeOnly="false"/>
+    <welcome file="Welcome"/>
+    <license file="License"/>
+    <choices-outline>
+        <line choice="choice30"/>
+        <line choice="choice31"/>
+        <line choice="choice32"/>
+        <line choice="choice33"/>
+        <line choice="choice34"/>
+    </choices-outline>
+    <choice id="choice30" title="Arita-buriB">
+        <pkg-ref id="com.agfont.aritaburi.Arita-buriB.pkg"/>
+    </choice>
+    <choice id="choice31" title="Arita-buriHL">
+        <pkg-ref id="com.agfont.aritaburi.Arita-buriHL.pkg"/>
+    </choice>
+    <choice id="choice32" title="Arita-buriL">
+        <pkg-ref id="com.agfont.aritaburi.Arita-buriL.pkg"/>
+    </choice>
+    <choice id="choice33" title="Arita-buriM">
+        <pkg-ref id="com.agfont.aritaburi.Arita-buriM.pkg"/>
+    </choice>
+    <choice id="choice34" title="Arita-buriSB">
+        <pkg-ref id="com.agfont.aritaburi.Arita-buriSB.pkg"/>
+    </choice>
+    <pkg-ref id="com.agfont.aritaburi.Arita-buriB.pkg" installKBytes="4812" version="1.0" auth="Root">file:./Contents/Packages/aritaburib.pkg</pkg-ref>
+    <pkg-ref id="com.agfont.aritaburi.Arita-buriHL.pkg" installKBytes="3192" version="1.0" auth="Root">file:./Contents/Packages/aritaburihl.pkg</pkg-ref>
+    <pkg-ref id="com.agfont.aritaburi.Arita-buriL.pkg" installKBytes="5044" version="1.0" auth="Root">file:./Contents/Packages/aritaburil.pkg</pkg-ref>
+    <pkg-ref id="com.agfont.aritaburi.Arita-buriM.pkg" installKBytes="5012" version="1.0" auth="Root">file:./Contents/Packages/aritaburim.pkg</pkg-ref>
+    <pkg-ref id="com.agfont.aritaburi.Arita-buriSB.pkg" installKBytes="4976" version="1.0" auth="Root">file:./Contents/Packages/aritaburisb.pkg</pkg-ref>
+</installer-script>
