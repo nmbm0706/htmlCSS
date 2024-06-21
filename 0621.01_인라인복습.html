@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .clearfix::before,.clearfix::after{
+      content: "";
+      display: block;
+    }
+    .clearfix::after{clear: both;}
+    /* article{overflow: hidden;} */
+    div,span{border: 1px solid;}
+    div{float: left;}
+    span{float: right;}
+    section{width: 50px; border: 1px solid; margin: 50px auto;}
+    /* claer: both; */
+    nav{float: right;}
+    nav span{float: left;}
+  </style>
+</head>
+<body>
+  <article class="claerfix">
+    <div>블록요소</div>
+    <div>블록요소</div>
+    <div>블록요소</div>
+    <div>블록요소</div>
+    <div>블록요소</div>
+    <span>인라인요소1</span>
+    <span>인라인요소2</span>
+    <span>인라인요소3</span>
+    <span>인라인요소4</span>
+    <span>인라인요소5</span>
+  </article>
+  <section>블록요소</section>
+  <article class="claerfix">
+    <div>블록요소</div>
+    <div>블록요소</div>
+    <div>블록요소</div>
+    <div>블록요소</div>
+    <div>블록요소</div>
+    <span>인라인요소</span>
+    <span>인라인요소</span>
+    <span>인라인요소</span>
+    <span>인라인요소</span>
+    <span>인라인요소</span>
+  </article>
+  <section>블록요소</section>
+  <!-- text align을 주면 블록요소는 가지고 있는 크기에서 정렬이 되고
+  인라인요소는 화면상에서 정렬이 된다
+  블록요소는 마진으로밖에 못 보낸다 
+  clearfix는 유튜브에 검색해서 다시 한번 봐야겠다.. 어떤 용도인지 모르겠음
+  float은 왼쪽 오른쪽은 되는데 가운데로는 못 보낸다 -->
+</body>
+</html>
