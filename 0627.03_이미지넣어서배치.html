@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+    body{}
+    .wrap{background-color: #d3222a}
+    .top{text-align: right;width: 1000px; margin: 0 auto; overflow: hidden;}
+    .top ul{float: right;}
+    .top ul li{float: left; }
+    .top ul li a{color: #fff; text-transform: uppercase; padding: 10px 0; display: block;}
+    .top ul li a::after{
+      content: "|";
+      padding: 0 10px;
+    }
+    .top ul li:last-child a::after{
+      content: "";
+
+    }
+    .pattern_bg{background-image: url(images/pattern.gif); height: 82px;}
+    .pattern{width: 1000px; margin: 0 auto;}
+    .main{height: 625px; overflow: hidden;width: 1000px; margin: 0 auto;}
+    .main>div{float: left;}
+    .index1{position: relative;}
+    .index1 ul{position: absolute; left: 50px; top: 250px;}
+    .index1 ul li a{color: #000; text-transform: uppercase;}
+    .index2{background: url(images/index_main_02.gif) ;width: 514px; height: 100%;}
+    .index2 p{}
+    .foot{background-color: #fff; border-bottom: 1px solid #ccc;}
+    .copyright{clear: both; height: 100px;text-align: center;
+    line-height: 100px; width: 1000px; margin: 0 auto;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <ul>
+        <li><a href="#">회원가입</a></li>
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">japanese</a></li>
+        <li><a href="#">chinese</a></li>
+        <li><a href="#">italian</a></li>
+      </ul>
+    </div>
+    <div class="pattern_bg">
+      <div class="pattern"><img src="images/index_pattern.gif" alt=""></div>
+    </div>
+    <div class="main">
+      <div class="index1">
+        <img src="images/index_main_01.gif" alt="index1">
+        <ul>
+          <li><a href="#">회원가입</a></li>
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">japanese</a></li>
+          <li><a href="#">chinese</a></li>
+          <li><a href="#">italian</a></li>
+        </ul>
+      </div>
+      <div class="index2">
+        <p>Home 메인 페이지입니다</p>
+      </div>
+    </div>
+    <div class="foot">
+      <div class="copyright"><img src="images/copyright.gif" alt=""></div>
+    </div>
+  </div>
+</body>
+</html>
