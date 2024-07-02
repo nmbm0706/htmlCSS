@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    body{}
+    .top{text-align: center;}
+    .box>h1{font-size: 50px;}
+    .box>p{font-size: 16px;}
+    ul{list-style: none; margin: 50px;}
+    .left ul li{float: left;}
+    .left{width: 680px; color: #fff; float: left;}
+    .left ul li .box p img{padding-top: 20px;}
+    .left ul li .box1{width: 300px; padding-top: 300px; padding-left: 30px;}
+    .left ul li .box2{width: 300px; padding-top: 300px; padding-left: 30px;}
+    .left ul li:first-child{width: 340px; height: 550px; margin: -35px 0;
+      background-image: url(images/pr_img1.jpg); }
+    .left ul li:nth-child(2){width: 340px; height: 550px;
+      background-image: url(images/pr_img2.jpg);}
+
+    .right{width: 565px; height: 570px; float: left;}
+    .right li div{position: relative;}
+    .right ul li div{width: 300px; height: 300px;
+      background-color: #f0f0f0; cursor: pointer;}
+    .right ul li div{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+    .right ul li div h1{font-weight: normal;}
+    .right ul li div h1 span{display: block; font-weight: bold;}
+    .right ul li div p:nth-of-type(1){margin: 10px 0;}
+    .line{position: absolute; background-color: #07348C;}
+    .line-top{width: 100%; height: 5px; left: 0; transform: scale(0);
+      transform-origin: 0 0; transition: all 0.5s ease-in-out 2s;}
+    .line-right{width: 5px; height: 100%; right: 0; transform: scaleY(0);
+      transform-origin: 0 0; transition: all 0.5s ease-in-out 1.5s;}
+    .line-bottom{width: 100%; height: 5px; bottom: 0; transform: scaleX(0);
+      transform-origin: 100% 0; transition: all 0.5s ease-in-out 1s;}
+    .line-left{width: 5px; height: 100%; left: 0; transform: scaleY(0);
+      transform-origin: 0 100%; transition: all 0.5s ease-in-out 0.5s;}
+    ul li:hover .line-top{transform: scale(1); transition: all 0.5s ease-in-out;}
+    ul li:hover .line-right{transform: scale(1); transition: all 0.5s ease-in-out 0.5s;}
+    ul li:hover .line-bottom{transform: scale(1); transition: all 0.5s ease-in-out 1s;}
+    ul li:hover .line-left{transform: scale(1); transition: all 0.5s ease-in-out 1.5s;}
+    ul li div img{transition: 0.5s;}
+    ul li:hover div img{transform: translateX(20px);}
+  </style>
+</head>
+<body>
+  <div class="top">
+    <h1>PR Center</h1>
+    <p>세상에 없던 신기술을 개척하는 기업, 극동건설이 기술의 진보를 선도합니다</p>
+  </div>
+  <div class="left">
+    <ul>
+      <li>
+        <div class="box box1">
+          <h1>극동뉴스</h1>
+          <p>극동건설의 다양항 소식을 가장 빠르게<br>전달해드립니다.</p>
+          <p><img src="images/next_bar_wh.png" alt=""></p>
+        </div>
+      </li>
+      <li>
+        <div class="box box2">
+          <h1>R&D</h1>
+          <p>끊임없는 신기술 개발과 혁신으로<br>극동건설이 건축기술의 진보를 위해<br>노력하고 있습니다</p>
+          <p><img src="images/next_bar_wh.png" alt=""></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="right">
+    <ul>
+      <li>
+        <div>
+          <h1>언론속의 <span>극동</span></h1>
+          <p>언론에 소개되는 극동의 소식을<br>안내해드립니다.</p>
+          <p><img src="images/next_bar_bk.png" alt=""></p>
+        </div>
+          <span class="line line-top"></span>
+          <span class="line line-right"></span>
+          <span class="line line-bottom"></span>
+          <span class="line line-left"></span>
+      </li>
+      <li>
+        <div>
+          <h1>입주고객<span>A/S안내</span></h1>
+          <p>스타클래스 입주 후 A/S 신청에<br>대한 안내입니다.</p>
+          <p><img src="images/next_bar_bk.png" alt=""></p>
+        </div>
+          <span class="line line-top"></span>
+          <span class="line line-right"></span>
+          <span class="line line-bottom"></span>
+          <span class="line line-left"></span>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

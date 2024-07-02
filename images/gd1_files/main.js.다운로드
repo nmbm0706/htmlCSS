@@ -1,0 +1,48 @@
+$(document).ready(function(e) {
+
+    $('#bannerList').slick({
+        dots: false,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        prevArrow: ".bannerPrev",
+        nextArrow: ".bannerNext",
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        pauseOnHover:true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            }
+        ]
+    });
+
+    accessFocus();
+});
+
+function accessFocus() {
+    $("input[type=checkbox]").focusin(function() {
+        var focusId = $(this).attr('id');
+        $("label[for="+focusId+"]").addClass('focusIn');
+    });
+
+    $("input[type=checkbox]").focusout(function() {
+        var focusId = $(this).attr('id');
+        $("label[for="+focusId+"]").removeClass('focusIn');
+    });
+
+    $("input[type=file]").focusin(function() {
+        $(this).parent().parent().addClass('focusIn');
+    });
+
+    $("input[type=file]").focusout(function() {
+        $(this).parent().parent().removeClass('focusIn');
+    });
+}
