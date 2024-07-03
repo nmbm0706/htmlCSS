@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none; width: 400px;}
+    p:first-child{width: 72px; height: 72px; mask-image: url(images/ico_business_item01.svg); mask-repeat: no-repeat;
+      background-color: #000; cursor: pointer; float: left;}
+    p:last-child{float: right;}
+    .wrap ul li{overflow: hidden;}
+    .wrap ul li::after{
+      content: "";
+      width: 400px;
+      height: 2px;
+      bottom: 0;
+    }
+    .wrap ul li:nth-child(2) p{mask-image: url(images/ico_business_item02.svg);}
+    .wrap ul li:nth-child(3) p{mask-image: url(images/ico_business_item03.svg);}
+    .wrap ul li:nth-child(4) p{mask-image: url(images/ico_business_item04.svg);}
+    p:hover{width: 72px; height: 72px; mask-image: url(images/ico_business_item01.svg); 
+      mask-repeat: no-repeat; background-color: #be8226;}
+    h1:hover{content: url(images/ico_circle_arrow_active.png);}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <ul>
+      <li>
+        <p></p>
+        <p>건축 <span><img src="images/ico_circle_arrow.png" alt="화살표"></span></p>
+      </li>
+      <li>
+        <p></p>
+        <p>선박·해양플랜트<span><img src="images/ico_circle_arrow.png" alt="화살표"></span></p>
+      </li>
+      <li>
+        <p></p>
+        <p>플랜트<span><img src="images/ico_circle_arrow.png" alt="화살표"></span></p>
+      </li>
+      <li>
+        <p></p>
+        <p>자동차 <span><img src="images/ico_circle_arrow.png" alt="화살표"></span></p>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
