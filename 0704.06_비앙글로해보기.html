@@ -10,22 +10,22 @@
     ul{list-style: none;}
     a{color: #000; text-decoration: none;}
     header{height: 100px;}
-    #wrap header .top{padding: 0 80px; background-color: #f9f9f9;}
+    #wrap header .top{padding: 0 80px; background-color: #f9f9f9; position: relative;}
     #wrap .logo{float: left; width: 126px; height: 40px; position: relative;}
     #wrap .logo a{display: block; width: 100%; top: 70%; left: 20px; height: 40px; position: absolute;}
-    #wrap .menu{position: relative;}
+    #wrap .menu{}
     #wrap .menu > ul{height: 100px;}
     #wrap .menu > ul > li{float: left; position: relative; width: 150px; padding-left: 40px;}
-    #wrap .menu > ul > li:last-child{float: right; width: 300px; line-height: 100px;}
+    #wrap .menu > ul > li:last-child{float: right; width: 350px; line-height: 100px;}
     #wrap .menu > ul > li:last-child p{float: left; width: 30%; text-align: center; 
       font-weight: bold;}
     #wrap .menu > ul > li > a{display: block; line-height: 100px; text-align: center; 
-      font-weight: bold;}
+      font-weight: bold; text-transform: uppercase;}
     #wrap .menu > ul .sub{height: 0; overflow: hidden; 
       transition: 0.5s; position: absolute; left: 0; top: 100px; width: 100%; z-index: 2;}
     #wrap .menu > ul:hover .sub{height: 320px; padding: 20px 0; }  
     #wrap .menu > ul .sub li{line-height: 30px; text-align: center; padding-left: 40px;}
-    #wrap .menu > ul .sub li a{color: #999;}
+    #wrap .menu > ul .sub li a{color: #999; text-transform: capitalize;}
     #wrap .menu > ul .sub li:hover a{width: 100%; color: darkgreen; display: block; text-decoration: underline;}
     .bg{position: absolute; left: 0; top: 100px; background-color: #f9f9f9; width: 100%; height: 0px;
       transition: 0.5s; z-index: 1;}
@@ -68,14 +68,14 @@
               <a href="#">support</a>
               <ul class="sub">
                 <li><a href="#">how to use</a></li>
-                <li><a href="#">faq</a></li>
+                <li><a href="#">FAQ</a></li>
                 <li><a href="#">get in touch</a></li>
               </ul>
             </li>
             <li>
-              <p><a href="#">faq</a></p>
-              <p><a href="#">get in touch</a></p>
-              <p><a href="#">en</a></p>
+              <p><a href="#">FAQ</a></p>
+              <p><a href="#">Get In Touch</a></p>
+              <p><a href="#">EN</a></p>
             </li>
           </ul>
           <div class="bg"></div>
