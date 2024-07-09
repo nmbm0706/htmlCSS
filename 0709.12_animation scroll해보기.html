@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{width: 200px; height: 200px; background-color: #007aff; border-radius: 50%;
+      }
+    div .bg{line-height: 195px; text-align: center;}
+    div .bg img:first-child{width: 90%; height: 90%; vertical-align: middle; position: relative;
+      animation: scroll 10s linear infinite;}
+    div .bg img:nth-child(2){z-index: 1; vertical-align: middle; position: absolute; top: 100px;
+      left: 100px;}
+
+    @keyframes scroll{
+      from{transform: rotate(0deg);}
+      to{transform: rotate(360deg);}
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="bg">
+      <img src="images/scroll_down.png" alt="">
+      <img src="images/down.png" alt="">
+    </div>
+  </div>
+</body>
+</html>

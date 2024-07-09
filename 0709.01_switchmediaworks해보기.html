@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  *{margin: 0; padding: 0;}
+  ul{list-style: none;}
+  a{text-decoration: none; color: #000;}
+  #wrap{width: 1900px; height: 300px; margin: 0 auto; padding: 60px 0;} 
+  section{position: relative;}
+
+  #wrap .left{width: 50%; padding: 100px 0 0 200px;}
+  #wrap .left h1{font-size: 110px; display: inline-block; line-height: 90px; font-weight: normal;}
+
+  #wrap .right{width: 50%; height: 100%; top: 90px; right: 0; position: absolute; float: right;}
+  #wrap .right > ul{width: 700px;}
+  #wrap .right > ul > li{border-top: 1px solid #000;}
+  #wrap .right > ul > li:nth-child(3){border-bottom: 1px solid #000;}
+  #wrap .right > ul > li a{width: 100%; font-size: 30px; padding: 15px 0; display: block;}
+  #wrap .right > ul > li span{float: right; padding-right: 10px; position: relative;}
+  #wrap .right > ul > li:hover span::after{
+    content: "-";
+    position: absolute;
+    left: 0;
+  }
+  #wrap .right > ul > li > ul{width: 100%; height: 0; font-size: 14px; color: #0000009C; transition: 0.5s; overflow: hidden;}
+
+  #wrap .right > ul > li:hover > ul{
+    height: 50px;
+  }
+</style>
+<body>
+  <div id="wrap">
+    <section>
+      <div class="left">
+        <h1>Our<br>Services.</h1>
+      </div>
+      <div class="right">
+        <ul>
+          <li><a href="#">UX / UI<span>+</span></a>
+            <ul>
+              <li>Concept Proposal / UX Planning / UI Design</li>
+            </ul>
+          </li>
+          <li><a href="#">Motion<span>+</span></a>
+            <ul>
+              <li>Scenario Plannig / 2S Motion graphic Design / 3D Modeling & Animation / 3D<br>VFX</li>
+            </ul>
+          </li>
+          <li><a href="#">Production<span>+</span></a>
+            <ul>
+              <li>Pre-Production / Production / Post-Production</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
