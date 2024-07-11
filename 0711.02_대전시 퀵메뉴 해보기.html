@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #000;}
+    #dj{width: 1200px;}
+    #dj ul{width: 1000px; overflow: hidden; margin: 50px auto;}
+    #dj ul li{width: calc(100% / 4); float: left; padding-right: 50px; box-sizing: border-box;}
+    #dj ul li a{width: 200px; height: 100%; text-align: center;}
+    #dj ul li a p{font-size: 24px; padding-bottom: 20px;}
+    #dj ul li a div{width: 200px; height: 200px; border-radius: 50%; 
+      background-position: top; background-repeat: no-repeat; background-size: cover;}
+    #dj ul li:first-child a div{background-image: url(images/bg_info_m06.png);}
+    #dj ul li:nth-child(2) a div{background-image: url(images/bg_info_m02.png);}
+    #dj ul li:nth-child(3) a div{background-image: url(images/bg_info_m03.png);}
+    #dj ul li:nth-child(4) a div{background-image: url(images/bg_info_m04.png);}
+
+    #dj ul li:hover a div{background-position: bottom; background-repeat: no-repeat;
+      background-size: cover;}
+    #dj ul li:first-child:hover a div{
+      background-image: url(images/bg bg_info_m06);
+    }
+    #dj ul li:nth-child(2):hover a div{
+      background-image: url(images/bg bg_info_m02);
+    }
+    #dj ul li:nth-child(3):hover a div{
+      background-image: url(images/bg bg_info_m02);
+    }
+    #dj ul li:nth-child(4):hover a div{
+      background-image: url(images/bg bg_info_m02);
+    }
+  </style>
+</head>
+<body>
+  <div id="dj">
+    <ul>
+      <li>
+        <a href="#">
+          <p>대전청년포털</p>
+          <div>
+            <p></p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>도시주택정보</p>
+          <div>
+            <p></p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>동물보호센터</p>
+          <div>
+            <p></p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>보건환경연구원</p>
+          <div>
+            <p></p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
