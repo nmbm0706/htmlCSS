@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .container{background: #ccc; margin: 20px; padding: 20px; display: flex; height: 485px;}
+    .container > div{border: 1px solid;}
+    .container .box1{width: 711px; display: flex;}
+    .container .box1 img{background-position: center; object-fit: cover;}
+
+    .container .box1 .review{display: flex; flex-direction: column;}
+    .container .box1 .review > img{width: 452px; height: 226px;}
+    .container .box1 .review .left{flex-direction: row;}
+    .container .box1 .review .left img{width: 215px; height: 215px;}
+    .container .box1 > img{width: 215px; height: 463px;}
+    .container .box2{width: 711px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box1">
+      <div class="review">
+        <img src="images/review1.jpg" alt="">
+        <div class="left">
+          <img src="images/review2.jpeg" alt="">
+          <img src="images/review3.jpeg" alt="">
+        </div>
+      </div>
+      <img src="images/review4.jpg" alt="">
+    </div>
+    <div class="box2">
+      <div class="review5"></div>
+      <div class="review6"></div>
+      <div class="review7"></div>
+    </div>
+    <div class="review8"></div>
+  </div>
+</body>
+</html>

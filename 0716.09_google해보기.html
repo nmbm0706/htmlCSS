@@ -5,20 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
   <style>
     @font-face {
       font-family: googleF;
       src: url(webfonts/Apple_산돌고딕_Neo/AppleSDGothicNeoR.ttf) format("woff2");
     }
     *{margin: 0; padding: 0;}
+    :focus{outline: none;}
     a,li,p{text-decoration: none; font-family: googleF; color: #000;}
     a{vertical-align: middle;}
     ul{list-style: none;}
-    .googleWrap{width: 100%; height: 960px; position: relative;}
+    .googleWrap{width: 100%; height: 100vh; position: relative;}
     .googleWrap .head{width: 100%;}
     .googleWrap .head ul{width: 100%; height: 60px;}
-    .googleWrap .head ul li{line-height: 60px;}
+    .googleWrap .head ul li{margin-top: 20px;}
     
     .googleWrap .head .headLeft ul{float: left; width: 300px; position: absolute; left: 0; top: 0;}
     .googleWrap .head .headLeft ul li{float: left;}
@@ -26,15 +27,15 @@
     .googleWrap .head .headLeft ul li:first-child a{margin: 0 5px 0 15px;}
 
     .googleWrap .head .headRight ul{float: right; width: 300px; position: absolute; right: 0; top: 0;}
-    .googleWrap .head .headRight ul li{float: left; display: block;}
+    .googleWrap .head .headRight ul li{float: left; display: block; margin: 20px 10px;}
     .googleWrap .head .headRight ul li a{font-size: 13px; color: #1f1f1f; font-family: arial, sans-serif;
       text-align: center; }
     .googleWrap .head .headRight ul li:nth-child(3){border-radius: 50%;}
     .googleWrap .head .headRight ul li:nth-child(3) a img{vertical-align: middle;}
     .googleWrap .head .headRight ul li:nth-child(4) a{color: #fff; border-radius: 50px;
-      padding: 5px 15px; margin-left: 30px; background: #0b57d0; vertical-align: middle;}
+      padding: 10px 20px; margin-left: 10px; background: #0b57d0; vertical-align: middle;}
     
-    .googleWrap .head .headRight ul li:nth-child(3):hover{}
+    .googleWrap .head .headRight ul li:nth-child(3):hover{background: #ccc;}
 
     .googleWrap .main{width: 100%; height: 700px; overflow: hidden;}
     .googleWrap .main > div p{left: 0; top: 0; position: absolute;
@@ -46,6 +47,10 @@
       background-position: 10px 10px;
       padding: 0 40px;
     }
+    .googleWrap .main div form a{position: absolute;}
+    .googleWrap .main div form a:nth-of-type(1){right: 140px; top: 18px;}
+    .googleWrap .main div form a:nth-of-type(2){right: 105px; top: 15px;}
+    .googleWrap .main div form a:nth-of-type(3){right: 50px; bottom: 0;}
     
     .googleWrap .main > .txt{left: 0; top: 0; position: absolute;
       left: 50%; top: 30%; transform: translate(-50%, -50%);}
@@ -68,7 +73,6 @@
     .googleWrap .foot .foot2 .footRight ul li a{padding: 16px; color: #202124; font-size: 14px;}
 
     a:hover{text-decoration: underline;}
-
   </style>
 </head>
 <body>
@@ -93,7 +97,10 @@
       <div>
         <p><img src="images/google/image/glogo.png" alt="logo"></p>
         <form action="">
-          <input type="textarea" name="search" size="16">
+          <input type="textarea" name="search" size="16" autofocus>
+          <a href="#"><img src="images/google/image/keyboard.gif" alt=""></a>
+          <a href="#"><img src="images/google/image/mice.gif" alt=""></a>
+          <a href="#"><img src="images/google/image/img_search.JPG" alt=""></a>
         </form>
       </div>
       <div class="txt">
