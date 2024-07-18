@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    .wrap{width: 1584px; margin: 50px auto;}
+    .wrap ul{display: flex;}
+    .wrap ul li .inner{display: flex;}
+    .wrap ul li div > p{overflow: hidden;}
+    .wrap ul li div > p img{display: block; transition: 0.5s; transform: scale(1);}
+    .wrap ul li > div{position: relative;}
+    .wrap ul li > div .bg{position: absolute; width: 100%; height: 100%; left: 50%; top: 50%; 
+      transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.5); opacity: 0;
+      transition: 1s;}
+
+    .wrap ul li > div .box{position: absolute; width: 100%; height: 100%; left: 50%; top: 50%; 
+      transform: translate(-50%, -50%); text-align: center; 
+      padding-top: 180px; box-sizing: border-box; z-index: 1;}
+    .wrap ul li > div .box p{color: #fff; font-size: 17px; text-transform: uppercase; font-weight: bold;
+      transition: 0.5s;}
+    .wrap ul li > div .box span{opacity: 0; transition: 1s; transform: translateY(0); display: block;}
+    .wrap ul li > div .box span a{display: inline-block; color: #000; text-decoration: none;
+      background: #fff; padding: 10px 20px; font-size: 11px; margin-top: 20px;}
+
+    .wrap ul li .inner div{overflow: hidden;}
+    .wrap ul li .inner > div:nth-child(2) p img{transform: scale(1); transition: 0.5s;}
+    .wrap ul li .inner > div:nth-child(2):hover p img{transform: scale(1.2);}
+
+    .wrap ul li > div .box span:last-child:hover a{color: #fff; background: #000;}
+    .wrap ul li > div .box:hover ~ .bg{opacity: 1;}
+    .wrap ul li > div:hover > p img{transform: scale(1.2);}
+    .wrap ul li > div .box:hover p{transform: translateY(-20px);}
+    .wrap ul li > div .box:hover span{opacity: 1; transform: translateY(-20px);}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <ul>
+      <li>
+          <div>
+            <p><img src="images/madfor/breadstarter.png" alt="breadstarter"></p>
+            <div class="box">
+              <span><img src="images/madfor/m-icon_brand.png" alt="breadstartericon"></span>
+              <p>bread & starter</p>
+              <span><a href="#">자세히 보기</a></span>
+            </div>
+            <div class="bg"></div>
+          </div>
+          <div>
+            <p><img src="images/madfor/pizza.jpg" alt="pizza"></p>
+          </div>
+      </li>
+      <li>
+          <div class="inner">
+            <div class="double">
+              <div><p><img src="images/madfor/up.png" alt="up"></p>
+              </div>
+              <div>
+                <p><img src="images/madfor/down.png" alt="down"></p>
+              </div>
+            </div>
+            <div>
+              <p><img src="images/madfor/salad.jpg" alt="salad"></p>
+            </div>
+          </div>
+          <div>
+            <p><img src="images/madfor/ricerisotto.jpg" alt="ricerisotto"></p>
+          </div>
+      </li>
+      <li>
+        <div>
+          <p><img src="images/madfor/pasta.png" alt="pasta"></p>
+        </div>
+        <div>
+          <p><img src="images/madfor/steak.jpg" alt="steak"></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

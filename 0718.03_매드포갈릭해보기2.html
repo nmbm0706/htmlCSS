@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    .wrap{width: 1504px; height: 825px; margin: 0 auto;}
+    .wrap > ul{display: flex; object-fit: cover;}
+    .wrap > ul > li{}
+    .wrap > ul > li:nth-child(2){width: 246px; height: 246px;}
+    .wrap > ul > li:nth-child(2) img{width: 100%; height: 100%;}
+    .wrap > ul > li img{display: block;}
+
+    .wrap > ul li .over{}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <ul>
+      <li>
+        <img src="images/madfor/main.jpg" alt="main">
+        <div class="over">
+          <div class="inner">
+            <p><img src="images/madfor/section2-list_logo.png" alt="logo"></p>
+            <a href="#">자세히 보기</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <ul>
+          <li><img src="images/madfor/ade.png" alt="ade"></li>
+          <li><img src="images/madfor/apogato.png" alt="apogato"></li>
+          <li><img src="images/madfor/ice.jpg" alt="ice"></li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li><img src="images/madfor/lemon.png" alt="lemon"></li>
+          <li><img src="images/madfor/wine.png" alt="wine"></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

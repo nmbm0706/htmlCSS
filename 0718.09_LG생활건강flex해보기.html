@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    .wrap{width: 1346px; height: 406px; display: flex; margin: 20px auto;}
+    .wrap > div{flex-basis: 174px; border-radius: 15px; transition: 0.5s; background-repeat: no-repeat; background-position: 0 0; display: flex; margin-right: 20px; position: relative; background-size: cover;}
+    .wrap div .txt{flex-direction: column; position: absolute;}
+    .wrap div:nth-child(1){flex-shrink: 3; background: red; background-image: url(images/LG/new_esg_img1.jpg); border-radius: 15px;}
+    .wrap div:nth-child(2){flex-shrink: 1; background: blue;}
+    .wrap div:nth-child(3){flex-shrink: 1; background: yellow;}
+    .wrap div:nth-child(4){flex-shrink: 1; background: green; margin-right: 0;}
+
+    .wrap div p{color: #fff;}
+    .wrap div p:first-child{font-size: 18px; padding-left: 20px; opacity: 0; transition: 0.5s;}
+    .wrap div p:nth-child(2){font-size: 24px; transition: 0.5s; padding-top: 5px;}
+ 
+    .wrap > div:hover{flex: 2 1 0;}
+    .wrap > div:hover .txt p:first-child{opacity: 1; transform: translate(20px, 40px);}
+    .wrap > div:hover .txt p:nth-child(2){font-size: 30px; transform: translate(20px, 30px);}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div>
+      <div class="txt">
+        <p>LG생활건강이 만드는</p>
+        <p>지속 가능한 삶</p>
+      </div>
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>
