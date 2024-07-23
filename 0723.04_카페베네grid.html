@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #wrap{display: grid; width: 1190px; height: 1080px; margin: 50px auto;
+      grid-template-columns: 300px 300px 590px;
+      grid-template-rows: 242px 376px 100px 600px;}
+
+    #wrap > div{width: 100%; height: 100%; object-fit: cover; text-align: center;}
+    .item1{width: 600px; height: 242px; background-image: url(images/caffebene/20230314322177.jpg);
+      grid-column: 1 / span 2;}
+    .item2{width: 300px; height: 476px;
+      background-repeat: no-repeat; grid-column: 1; grid-row: 2 / span 3;}
+    .item2 img{width: 118px; height: 135px; margin-top: 110px;}
+    .item2 p{font-size: 14px; color: #3a476a; font-weight: bold;}
+    .item3{width: 300px; height: 476px; background-image: url(images/caffebene/20230314819418.jpg);
+      grid-column: 2; grid-row: 2 / span 3;}
+    .item4{width: 590px; height: 618px; background-image: url(images/caffebene/20230309868280.gif);
+      grid-column: 3; grid-row: 1 / span 4;}
+    .item5{width: 600px; height: 600px; background-image: url(images/caffebene/20230314120130.jpg);
+      grid-column: 1 / span 2; grid-row: 4 / span 4;}
+    .item6{width: 590px; height: 700px; background-image: url(images/caffebene/20230314423839.jpg);
+      grid-column: 3; grid-row: 3 / span 4;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div class="item1"></div>
+    <div class="item2">
+      <img src="images/caffebene/20200623865131.gif" alt="">
+      <p>
+        '좋은' 사람들이<br>
+        '좋은' 원두로<br>
+        '좋은' 커피를 내리는 곳<br>
+        바로 카페베네입니다.
+      </p>
+    </div>
+    <div class="item3"></div>
+    <div class="item4"></div>
+    <div class="item5"></div>
+    <div class="item6"></div>
+  </div>
+</body>
+</html>

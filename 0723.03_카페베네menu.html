@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+
+    .head{width: 1190px; margin: 0 auto; height: 123px; display: flex; justify-content: space-between;
+      align-items: center;}
+    .head > ul{display: flex;}
+    .head > ul > li{position: relative;}
+    .head > ul > li:hover .sub li a{color: #3a466a;}
+    .head > ul > li > a{display: block; padding: 0 30px; color: #444; line-height: 123px;
+      text-transform: uppercase; font-weight: bold; font-size: 15px;}
+    .head > ul > li:hover > a{color: #3a466a;}
+    .head > ul > li .sub{position: absolute; left: 0; top: 120px; width: 100%; z-index: 1; display: none;
+      text-align: center;}
+    .head > ul > li .sub li a{line-height: 40px; color: #222; font-size: 14px;}
+    .head > ul > li .sub li a:hover{font-weight: bold; text-decoration: underline;}
+    .head .bg{position: absolute; width: 100%; height: 240px; left: 0; top: 123px; background-color: rgba(255, 255, 255, 0.8); display: none;}
+
+    .head > ul:hover .sub{display: block;}
+    .head > ul:hover ~ .bg{display: block;}
+
+    .head .lang p:first-child{margin-left: 50px;}
+    .head .lang p:first-child a{font-size: 12px; font-weight: bold; padding: 0px 5px 0px 6px;
+      display: inline-block; padding-bottom: 15px;}
+    .head .lang p:first-child a:first-child{color: #444; position: relative;}
+    .head .lang p:first-child a:nth-child(2){color: #707070;}
+    .head .lang p:last-child a{display: block; background: #00a5b1; padding: 8px 20px;
+      border-radius: 50px; color: #fff; font-size: 14px; font-weight: bold;
+      box-sizing: border-box; margin-bottom: 35px; text-align: center;}
+
+    .head .lang p:first-child a:first-child::after{
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 3px;
+      width: 1px;
+      height: 12px;
+      color: #d4d4d4;
+      background-color: #d4d4d4;
+    }
+
+    section > img{width: 100%; object-fit: cover;}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="head">
+      <div class="logo"><a href="#"><img src="images/caffebenelogo.png" alt="logo"></a></div>
+      <ul>
+        <li>
+          <a href="#">caffebene</a>
+          <ul class="sub">
+            <li><a href="#">브랜드 스토리</a></li>
+            <li><a href="#">베네캣 스토리</a></li>
+            <li><a href="#">카페베네 원두</a></li>
+            <li><a href="#">카페베네 소식</a></li>
+            <li><a href="#">매거진</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">menu</a>
+          <ul class="sub">
+            <li><a href="#">신메뉴</a></li>
+            <li><a href="#">커피</a></li>
+            <li><a href="#">음료</a></li>
+            <li><a href="#">푸드</a></li>
+            <li><a href="#">MD상품</a></li>
+            <li><a href="#">Retail</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">store</a>
+          <ul class="sub">
+            <li><a href="#">국내</a></li>
+            <li><a href="#">해외</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">membership</a>
+          <ul class="sub">
+            <li><a href="#">등급&혜택</a></li>
+            <li><a href="#">가입방법안내</a></li>
+            <li><a href="#">서비스</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">global</a>
+          <ul class="sub">
+            <li><a href="#">해외매장안내</a></li>
+            <li><a href="#">해외사업소개</a></li>
+            <li><a href="#">해외가맹&유통문의</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">contents</a>
+          <ul class="sub">
+            <li><a href="#">커피</a></li>
+            <li><a href="#">우리동네</a></li>
+            <li><a href="#">사람들</a></li>
+            <li><a href="#">메뉴</a></li>
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">매장</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="bg"></div>
+      <div class="lang">
+        <p><a href="#">KR</a><a href="#">EN</a></p>
+        <p><a href="#">가맹문의</a></p>
+      </div>
+    </div>
+  </header>
+  <section><img src="images/20240716162319.jpg" alt="bg"></section>
+</body>
+</html>

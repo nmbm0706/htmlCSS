@@ -10,7 +10,7 @@
     ul{list-style: none;}
     a{text-decoration: none; color: #444; display: block;}
     #wrap{width: 100%; height: 500px;}
-    #wrap .head{width: 1190px; height: 123px; margin: 0 auto; position: relative; z-index: 1;}
+    #wrap .head{width: 1190px; height: 123px; margin: 0 auto; z-index: 1;}
     #wrap .head .lan{float: right;}
     #wrap .head .lan p{float: left; margin-right: 10px; font-size: 12px; color: #444;
       padding-top: 20px; font-weight: bold;}
@@ -29,23 +29,24 @@
     #wrap .logo{float: left; line-height: 100px; margin-right: 50px;}
     #wrap .logo img{vertical-align: middle;}
     #wrap .head > ul{padding-top: 50px; box-sizing: border-box;}
-    #wrap .head > ul > li{float: left; text-align: center; width: 140px;}
+    #wrap .head > ul > li{float: left; text-align: center; width: 140px; position: relative;}
     #wrap .head > ul > li > a{font-size: 15px; font-weight: bold; text-transform: uppercase;}
 
-    #wrap .head > ul > li > ul{margin-top: 50px; display: none;}
+    #wrap .head > ul > li > ul{margin-top: 50px;}
     #wrap .head > ul > li > ul > li{line-height: 40px;}
+    #wrap .head > ul .sub{display: none; z-index: 1;}
     #wrap .head > ul > li > ul > li a{font-weight: normal; font-size: 14px; color: #222;}
 
     #wrap .head > ul > li:last-child{background: #00A5B1; border-radius: 50px; padding: 5px 0;
-      position: absolute; right: 0;}
+      position: absolute; right: 370px;}
     #wrap .head > ul > li:last-child a{color: #fff;}
     #wrap .head > ul > li:last-child:hover a{color: #fff;}
 
-    #wrap .bg{background: #fff; width: 1920px; bottom: -280px;
-      left: -365px; opacity: 0.5;}
+    /* #wrap .bg{position: absolute; left: 0; top: 123px; background: #000; width: 100%; height: 280px;
+      opacity: 0.5;} */
 
     #wrap .head > ul > li:hover a{color: #3A466A;}
-    #wrap .head > ul > li:hover .sub{display: block; color: #3A466A;}
+    #wrap .head > ul:hover > li .sub{display: block; color: #3A466A;}
     #wrap .head > ul > li ul li:hover a{text-decoration: underline; font-weight: bold;}
   </style>
 </head>
@@ -117,8 +118,8 @@
         </li>
         <li><a href="#">가맹문의</a></li>
       </ul>
+      <div class="bg"></div>
     </div>
-    <div class="bg"></div>
   </div>
 </body>
 </html>
