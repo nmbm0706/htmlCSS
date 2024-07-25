@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hanwhaeagles</title>
+  <style>
+    @keyframes tongtong {
+      0%{transform: translateY(-24px);}
+      100%{transform: translateY(0);;}
+    }
+    @font-face {
+      font-family: hanwhaR;
+      src: url(webfonts/HanwhaR.woff2) format("woff2");
+    }
+    @font-face {
+      font-family: myriadR;
+      src: url(webfonts/MyriadPro-Regular.woff2) format("woff2");
+    }
+    @font-face {
+      font-family: myriadB;
+      src: url(webfonts/MyriadPro-Bold.woff2);
+    }
+    @font-face {
+      font-family: hanwhagothicEL;
+      src: url(webfonts/HanwhaGothicEL.woff2) format("woff2");
+    }
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+    #wrap{width: 100%; height: 5057px; position: relative; background: #000; margin: 0 auto;}
+    #wrap header{width: 100%; height: 110px; display: flex; position: relative; background: #000;
+      border-bottom: 1px solid #333; z-index: 1;}
+    #wrap header .logo{text-align: center; line-height: 110px; padding-left: 60px;}
+    #wrap header .logo img{width: 92px; height: 60px; vertical-align: middle;}
+    #wrap header > ul{padding: 25px 0 0 10px;}
+    #wrap header > ul > li{float: left; padding: 0 20px;}
+    #wrap header > ul > li:first-child > a{font-family: hanwhaR;}
+    #wrap header > ul > li > a{display: inline-block; height: 65px; padding-top: 20px; color: #fff;
+      font-size: 18px; position: relative; font-family: myriadR;}
+    #wrap header > ul > li > a::after{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #f37321;
+      transform: scale(0);
+      transition: 0.3s;
+      transform-origin: left;
+    }
+    #wrap header > ul > li:hover > a::after{
+      transform: scale(1);
+    }
+    #wrap header > ul > li ul.sub{float: left; position: absolute; height: 0; transition: 0.5s; overflow: hidden;}
+    #wrap header > ul > li ul.sub li{float: left; position: relative; z-index: 1; padding: 24px 0;
+      left: -20px;}
+    #wrap header > ul > li:hover ul.sub{height: 50px;}
+
+    #wrap header > ul > li ul.sub li a{padding: 0 20px; height: 50px; color: #fff; font-size: 16px;
+      font-family: hanwhagothicEL;}
+    #wrap header > ul > li ul.sub li:hover a{color: #f37321;}
+
+
+    #wrap header > ul .bg{width: 100%; height: 70px; position: absolute; bottom: -70px; left: 0;
+      background: rgba(0, 0, 0, 0.8); opacity: 0; transition: 0.5s;}
+    #wrap header p{position: absolute; right: 0; padding: 43px 30px 0 0; }
+    #wrap header p a{padding-top: 20px; display: inline-block; color: #666; padding: 3px 8px 3px;
+      font-size: 18px; font-family: myriadR; position: relative; font-weight: bold;}
+    #wrap header p a:hover{color: #fff;} 
+    #wrap header p a:first-child::after{
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 15px;
+      background: #666;
+      right: -2px;
+      top: 5px;
+    }
+
+    #wrap header ul > li:hover .sub{display: block;}
+    #wrap header ul > li:hover a{color: #f37321;}
+    #wrap header ul > li:hover ~ .bg{opacity: 1;}
+    #wrap header ul:hover > li:nth-child(5):hover ~ .bg{display: none;} 
+    #wrap header ul:hover > li:nth-child(6):hover ~ .bg{display: none;}
+
+    #wrap .snsIcon{position: fixed; right: 50px; top: 45%; transform: translateY(-45%); z-index: 1;}
+    #wrap .snsIcon p{width: 76px; height: 76px; margin-bottom: 5px; background: #000; border-radius: 50%;
+      border: 3px solid transparent;}
+    #wrap .snsIcon p:hover{border: 3px solid #f37321;}
+
+    #wrap .main{position: absolute; top: -30px; height: 100%; overflow: hidden;}
+    #wrap .main video{width: 100%; position: relative;}
+
+    #wrap .main .sch{position: absolute; height: 500px; top: 865px; padding-top: 60px;}
+    #wrap .main .sch > p{color: #fff; padding-top: 60px; animation: tongtong 0.8s ease-in infinite alternate;}
+    #wrap .main .sch ul{width: 100%; height: 440px; gap: 20px; display: flex; margin-left: 400px;
+      flex-basis: 40%; position: relative;}
+    #wrap .main .sch ul::after{
+      content: "";
+      position: absolute;
+      bottom: -64px;
+      left: 0;
+      width: 620px;
+      height: 4px;
+      background: #888;
+    }
+    #wrap .main .sch ul::before{
+      content: "";
+      position: absolute;
+      bottom: -64px;
+      left: 0;
+      width: 1240px;
+      height: 4px;
+      background: #444;
+    }
+    #wrap .main .sch ul li{width: 392px; height: 100%; text-align: center; background: rgba(20, 20, 20, 0.9); border-radius: 10px; overflow: hidden; position: relative;}
+    #wrap .main .sch ul li:first-child{animation: tongtong 0.8s ease-in infinite alternate;}
+    #wrap .main .sch ul li:first-child:before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 7px;
+      background: #f37321;
+    }
+    #wrap .main .sch ul li:hover:after{
+      /* content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: #f37321; */
+      content: "";
+      position: absolute;
+      border: 5px solid #f37321;
+      border-radius: 10px;
+      width: 382px;
+      height: 430px;
+      top: 0;
+      right: 0;
+    }
+    #wrap .main .sch ul li > p{text-align: left;}
+    #wrap .main .sch ul li > p:first-child{color: #888; font-size: 16px; font-family: hanwhagothicEL;
+      padding: 53px 38px 0;}
+    #wrap .main .sch ul li:first-child > p:nth-child(2){color: #f37321;}
+    #wrap .main .sch ul li > p:nth-child(2){color: #fff; font-size: 28px; font-family: myriadB;
+      padding: 0 38px; padding-bottom: 32px; position: relative;}
+    #wrap .main .sch ul li > p:nth-child(2)::after{
+      content: "";
+      position: absolute;
+      left: 38px;
+      bottom: 0;
+      width: 316px;
+      height: 1px;
+      background: #444;
+    }
+    #wrap .main .sch ul li div{margin: 0 30px; margin-top: 30px;}
+    #wrap .main .sch ul li div p{float: left; line-height: 200px; font-size: 24px; color: #888;
+      font-family: myriadB; margin: 0 20px; font-style: italic;}
+    #wrap .main .sch ul li p img{width: 92px; height: 92px; vertical-align: middle;}
+    #wrap .main .sch > p{position: absolute; top: -25px; left: 400px; font-size: 18px; 
+      font-family: myriadB; letter-spacing: 1px;} 
+
+    @keyframes gallery {
+      0%{transform: translateX(100%);}
+      100%{transform: translateX(0);}
+    }
+
+    #wrap .gallery{width: 100%; height: 925px; display: flex; margin-top: 1625px; position: relative;
+      gap: 30px; overflow: hidden; animation:  30s infinite; text-align: center;}
+    #wrap .gallery > div{width: 712px; height: 680px; border-radius: 10px; box-sizing: border-box; position: relative;}
+    #wrap .gallery img{border-radius: 10px;}
+    #wrap .gallery > div:first-child{margin-top: 44px;}
+    #wrap .gallery > div:nth-child(2){}
+    #wrap .gallery > div:nth-child(3){margin-top: 114px;}
+    #wrap .gallery > div:nth-child(4){}
+    #wrap .gallery > div:nth-child(5){margin-top: 18px;}
+    #wrap .gallery > div:nth-child(6){margin-top: 74px;}
+
+    #wrap .gallery > div .black{background: rgba(0, 0, 0, 0.5); width: 100%; height: 100%; 
+      position: absolute; top: 0; left: 0; transition: 0.5s; opacity: 1;}
+    #wrap .gallery > div:hover .black{opacity: 0;}
+
+    #wrap .gotog div{width: 210px; height: 60px; margin: 0 auto; position: relative;
+      border-radius: 10px;border: 1px solid #666; overflow: hidden;}
+    #wrap .gotog div::after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: -210px;
+      top: 0;
+      background: #f37321;
+      transition: 0.3s;
+    }
+    
+    #wrap .gotog div:hover:after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: #f37321;
+    }
+    #wrap .gotog p{border-radius: 10px; overflow: hidden;text-align: center;}
+
+    #wrap .gotog div:hover{border: 1px solid #f37321;}
+    #wrap .gotog p a{display: block; color: #fff; font-size: 16px; line-height: 60px; 
+      font-family: myriadR; z-index: 1; position: relative;}
+
+    #wrap .news{position: relative;}
+    #wrap .news ul{width: 1903px; height: 500px; margin-top: 300px; padding-left: 330px; box-sizing: border-box;}
+    #wrap .news ul li{width: 392px; height: 500px; object-fit: cover; float: left; margin-right: 30px;}
+    #wrap .news ul li:last-child{margin-right: 0;}
+    #wrap .news ul li img{width: 100%; height: 272px; border-radius: 10px;}
+
+    #wrap .news ul li .txt{color: #fff;}
+    #wrap .news ul li .txt span{font-size: 18px; font-family: myriadR; display: block; margin: 20px 0;}
+    #wrap .news ul li .txt p:nth-of-type(1){font-size: 24px; font-family: hanwhagothicEL;
+    letter-spacing: -1px; margin-bottom: 15px;}
+    #wrap .news ul li .txt p:nth-of-type(2){color: #808080; letter-spacing: -1px;
+      margin-bottom: 30px;}
+    #wrap .news ul li .txt p:nth-of-type(3) a{color: #808080; position: relative;
+      border-bottom: 1px solid #808080;}
+    #wrap .news ul li .txt p:nth-of-type(3) a::after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background: #808080;
+      transform: scale(0);
+      transition: 0.3s;
+      transform-origin: left;
+    }
+    #wrap .news ul li .txt p:nth-of-type(3) a:hover:after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background: #f37321;
+      transform: scale(1);
+    }
+    
+    #wrap .news ul li .txt p:nth-of-type(3) a:hover{color: #f37321;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <div class="logo"><a href="#"><img src="images/h_logo.png" alt="h_logo"></a></div>
+      <ul>
+        <li>
+          <a href="#">EAGLES</a>
+          <ul class="sub">
+            <li><a href="#">구단소개</a></li>
+            <li><a href="#">그룹사소개</a></li>
+            <li><a href="#">HISTORY</a></li>
+            <li><a href="#">한화생명 이글스파크</a></li>
+            <li><a href="#">사회공헌</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">PLAYER</a>
+          <ul class="sub">
+            <li><a href="#">코칭스탭</a></li>
+            <li><a href="#">투수</a></li>
+            <li><a href="#">포수</a></li>
+            <li><a href="#">내야수</a></li>
+            <li><a href="#">외야구</a></li>
+            <li><a href="#">군입대 선수</a></li>
+            <li><a href="#">응원단</a></li>
+            <li><a href="#">STAFF</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">GAME</a>
+          <ul class="sub">
+            <li><a href="#">1군 경기일정</a></li>
+            <li><a href="#">퓨처스 경기일정</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">FAN</a>
+          <ul class="sub">
+            <li><a href="#">구단소식</a></li>
+            <li><a href="#">키즈클럽</a></li>
+            <li><a href="#">팬 타임즈</a></li>
+            <li><a href="#">갤러리</a></li>
+            <li><a href="#">이글스 아카이브</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">SHOP</a>
+        </li>
+        <li>
+          <a href="#">TICKET</a>
+        </li>
+        <div class="bg"></div>
+      </ul>
+      <p>
+        <a href="#">KO</a>
+        <a href="#">EN</a>
+        <a href="#">LOGIN</a>
+        <a href="#">JOIN US</a>
+      </p>
+    </header>
+    <div class="snsIcon">
+      <p><a href="#"><img src="images/quick_sns_youtube.png" alt="quick_sns_youtube"></a></p>
+      <p><a href="#"><img src="images/quick_sns_facebook.png" alt="quick_sns_facebook"></a></p>
+      <p><a href="#"><img src="images/quick_sns_insta.png" alt="quick_sns_insta"></a></p>
+      <p><a href="#"><img src="images/quick_sns_twitter.png" alt="quick_sns_twitter"></a></p>
+    </div>
+    <div class="main">
+      <video src="images/movie_eagles.mp4" autoplay muted></video>
+      <div class="sch">
+        <ul>
+          <li>
+            <p>대전</p>
+            <p><strong>2024.07.25 (목) 18:30</strong></p>
+            <div>
+              <p><img src="images/bi_game_samsung.png" alt="bi_game_samsung"></p>
+              <p>vs</p>
+              <p><img src="images/bi_game_hanwha.png" alt="bi_game_hanwha"></p>
+            </div>
+          </li>
+          <li>
+            <p>잠실</p>
+            <p>2024.07.26 (금) 18:30</p>
+            <div>
+              <p><img src="images/bi_game_hanwha.png" alt="bi_game_hanwha"></p>
+              <p>vs</p>
+              <p><img src="images/bi_game_lg.png" alt="bi_game_lg"></p>
+            </div>
+          </li>
+          <li>
+            <p>잠실</p>
+            <p>2024.07.27 (토) 18:00</p>
+            <div>
+              <p><img src="images/bi_game_hanwha.png" alt="bi_game_hanwha"></p>
+              <p>vs</p>
+              <p><img src="images/bi_game_lg.png" alt="bi_game_lg"></p>
+            </div>
+          </li>
+          <li>
+            <p>잠실</p>
+            <p>2024.07.28 (일) 17:00</p>
+            <div>
+              <p><img src="images/bi_game_hanwha.png" alt="bi_game_hanwha"></p>
+              <p>vs</p>
+              <p><img src="images/bi_game_lg.png" alt="bi_game_lg"></p>
+            </div>
+          </li>
+        </ul>
+        <p>UPCOMING!</p>
+      </div>
+    </div>
+    <div class="gallery">
+      <div>
+        <img src="images/240309H1606+선수단.png" alt="선수단">
+        <div class="black"></div>
+      </div>
+      <div>
+        <img src="images/240310H0263+황준서.png" alt="황준서">
+        <div class="black"></div>
+      </div>
+      <div>
+        <img src="images/240310H0346+노시환.png" alt="노시환">
+        <div class="black"></div>
+      </div>
+      <div>
+        <img src="images/240311J2649+김강민.png" alt="김강민">
+        <div class="black"></div>
+      </div>
+      <div>
+        <img src="images/레이어+2.png" alt="레이어2">
+        <div class="black"></div>
+      </div>
+      <div>
+        <img src="images/레이어+3.png" alt="레이어3">
+        <div class="black"></div>
+      </div>
+      <div>
+        <img src="images/레이어+4.png" alt="레이어4">
+        <div class="black"></div>
+      </div>
+      <div>
+        <img src="images/레이어+5.png" alt="레이어5">
+        <div class="black"></div>
+      </div>
+    </div>
+    <div class="gotog">
+      <div>
+        <p><a href="#">GO TO GALLERY</a></p>
+      </div>
+    </div>
+    <div class="news">
+      <ul>
+        <li>
+          <a href="#"><img src="images/신축구장+이미지(2).jpg" alt="신축구장"></a>
+          <div class="bg"></div>
+          <div class="txt">
+            <span>2023-11-23</span>
+            <p><strong>25년부터 25년간…한화이글스, 대전시와<br>
+              신축구장 사용 · 수익계약 체결</strong></p>
+            <p>25년부터 25년간…한화이글스, 대전시와 신축구장 사용</p>
+            <p><a href="#">READ MORE</a></p>
+          </div>
+        </li>
+        <li>
+          <a href="#"><img src="images/후원+협약.jpg" alt="후원협약"></a>
+          <div class="bg"></div>
+          <div class="txt">
+            <span>2023-07-23</span>
+            <p><strong>한화이글스, 안치홍과 함께 초록우산<br>
+              어린이재단 후원</strong></p>
+            <p>한화이글스, 안치홍과 함께 초록우산 어린이재단 후원</p>
+            <p><a href="#">READ MORE</a></p>
+          </div>
+        </li>
+        <li>
+          <a href="#"><img src="images/홈페이지+썸네일.jpg" alt="썸네일"></a>
+          <div class="bg"></div>
+          <div class="txt">
+            <span>2023-07-05</span>
+            <p><strong>한화이글스, 코칭스태프 보직 변경</strong></p>
+            <p>한화이글스, 코칭스태프 보직 변경 한화이글스는 후반기</p>
+            <p><a href="#">READ MORE</a></p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
