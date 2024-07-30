@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @font-face {
+      font-family: samyangB;
+      src: url(webfonts/SYFotfBo00.woff2) format("woff2");
+    }
+    @font-face {
+      font-family: notosansKrB;
+      src: url(webfonts/NotoSansKR-Bold.woff2);
+    }
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+    ul.main{width: 100%; max-width: 1600px; height: 360px; display: flex; margin: 50px auto;}
+    ul.main li{width: 30%; object-fit: cover; position: relative; cursor: pointer; overflow: hidden;}
+    ul.main li a img{object-fit: cover; width: 100%; height: 100%; transform: scale(1);
+      transition: 0.5s;} 
+    ul.main li:hover a img{transform: scale(1.2);}
+    ul.main li:nth-child(1):after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: rgba(0, 163, 241, 0.84);
+      opacity: 0;
+      transition: 0.5s;
+    }
+    ul.main li:nth-child(1):hover:after{
+      opacity: 1;
+    }
+    ul.main li:nth-child(2):after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: rgba(219, 92, 41, 0.79);
+      opacity: 0;
+      transition: 0.5s;
+    }
+    ul.main li:nth-child(2):hover:after{
+      opacity: 1;
+    }
+    ul.main li:nth-child(3):after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: rgba(139, 185, 6, 0.76);
+      opacity: 0;
+      transition: 0.5s;
+    }
+    ul.main li:nth-child(3):hover:after{
+      opacity: 1;
+    }
+    ul.main li:nth-child(4):after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: rgba(0, 163, 241, 0.64);
+      opacity: 0;
+      transition: 0.5s;
+    }
+    ul.main li:nth-child(4):hover:after{
+      opacity: 1;
+    }
+    ul.main li div{padding: 50px; position: absolute; top: 0; left: 0;}
+    ul.main li div p{color: #fff; position: relative; z-index: 1;}
+    ul.main li div p:nth-child(1){font-size: 36px; font-family: samyangB; margin-bottom: 10px;}
+    ul.main li div p:nth-child(2){font-size: 19px; font-family:  notosansKrB; 
+      transform: translateY(20px); margin-bottom: 20px; opacity: 0; transition: 0.2s;}
+    ul.main li div p:nth-child(3){transform: translateY(30px); opacity: 0; transition: 0.5s;}
+
+    ul.main li:hover p:nth-child(2){opacity: 1; transform: translateY(0); transition: 0.3s;}
+    ul.main li:hover p:nth-child(3){opacity: 1; transform: translateY(0);}
+
+    @media screen and (max-width: 1539px) {
+      ul.main li div{padding: 35px 30px;}
+      ul.main li div p:nth-child(1){font-size: 32px;}
+    }
+    @media screen and (max-width: 1024px) {
+      ul.main{flex-wrap: wrap; width: 90%;}
+      ul.main li{width: 50%; height: 250px;}
+      ul.main li:hover a img{transform: none;}
+      ul.main li div p:nth-child(1){font-size: 30px;}
+      ul.main li div p:nth-child(2){display: none;}
+      ul.main li div p:nth-child(3){opacity: 1; transform: none;}
+      ul.main li:hover:after{display: none;}
+      ul.main li:nth-child(1) a{content: url(images/main_sec01_card_list_type01_bg1_m.jpg); 
+        width: 100%; height: 100%; object-fit: cover;}
+      ul.main li:nth-child(2) a{content: url(images/main_sec01_card_list_type01_bg2_m_230725.png); 
+        width: 100%; height: 100%; object-fit: cover;}
+      ul.main li:nth-child(3) a{content: url(images/main_sec01_card_list_type01_bg3_m.jpg); 
+        width: 100%; height: 100%; object-fit: cover;}
+      ul.main li:nth-child(4) a{content: url(images/main_sec01_card_list_type01_bg4_m.jpg); 
+        width: 100%; height: 100%; object-fit: cover;}
+    }
+    @media screen and (max-width: 766px) {
+      ul.main li{width: 100%; height: 175px;}
+      ul.main li div{padding: 20px 23px;}
+      ul.main li a img{width: 100%; height: 100%;}
+    }
+  </style>
+</head>
+<body>
+  <ul class="main">
+    <li>
+      <a href="#"><img src="images/main_sec01_card_list_type01_bg1_pc.jpg" alt="bg1"></a>
+      <div>
+        <p>화학</p>
+        <p>언제나 편리하게</p>
+        <p><img src="images/main_sec01_card_list_arrow.svg" alt="bg1"></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="images/main_sec01_card_list_type01_bg2_pc_230725.png" alt="bg2"></a>
+      <div>
+        <p>식품</p>
+        <p>누구나 풍요롭게</p>
+        <p><img src="images/main_sec01_card_list_arrow.svg" alt="bg2"></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="images/main_sec01_card_list_type01_bg3_pc.jpg" alt="bg3"></a>
+      <div>
+        <p>의약바이오</p>
+        <p>오래도록 건강하게</p>
+        <p><img src="images/main_sec01_card_list_arrow.svg" alt="bg3"></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="images/main_sec01_card_list_type01_bg4_pc.jpg" alt="bg4"></a>
+      <div>
+        <p>패키징</p>
+        <p>어디서나 즐겁게</p>
+        <p><img src="images/main_sec01_card_list_arrow.svg" alt="bg4"></p>
+      </div>
+    </li>
+  </ul>
+</body>
+</html>
