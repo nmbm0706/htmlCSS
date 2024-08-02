@@ -211,14 +211,29 @@
     #wrap .gotog p{border-radius: 10px; overflow: hidden;text-align: center;}
 
     #wrap .gotog div:hover{border: 1px solid #f37321;}
-    #wrap .gotog p a{display: block; color: #fff; font-size: 16px; line-height: 60px; 
+    #wrap .gotog p a{display: block; color: #fff; font-size: 16px; line-height: 65px; 
       font-family: myriadR; z-index: 1; position: relative;}
+    #wrap .gotog:last-child{margin-top: 100px;}
 
     #wrap .news{position: relative;}
     #wrap .news ul{width: 1903px; height: 500px; margin-top: 300px; padding-left: 330px; box-sizing: border-box;}
-    #wrap .news ul li{width: 392px; height: 500px; object-fit: cover; float: left; margin-right: 30px;}
+    #wrap .news ul li{width: 30%; height: 500px; float: left; margin-right: 30px;}
     #wrap .news ul li:last-child{margin-right: 0;}
-    #wrap .news ul li img{width: 100%; height: 272px; border-radius: 10px;}
+    #wrap .news ul li img{width: 100%; height: 272px; border-radius: 10px; object-fit: cover;}
+    #wrap .news ul li > a{position: relative; display: block;}
+    #wrap .news ul li > a::after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;  
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.3);
+      transition: 0.5s;
+    }
+    #wrap .news ul li > a:hover:after{
+      background: none;
+    }
 
     #wrap .news ul li .txt{color: #fff;}
     #wrap .news ul li .txt span{font-size: 18px; font-family: myriadR; display: block; margin: 20px 0;}
@@ -228,7 +243,7 @@
       margin-bottom: 30px;}
     #wrap .news ul li .txt p:nth-of-type(3) a{color: #808080; position: relative;
       border-bottom: 1px solid #808080;}
-    #wrap .news ul li .txt p:nth-of-type(3) a::after{
+    #wrap .news ul li .txt p:nth-of-type(3) a::before{
       content: "";
       position: absolute;
       width: 100%;
@@ -237,10 +252,10 @@
       left: 0;
       background: #808080;
       transform: scale(0);
-      transition: 0.3s;
+      transition: 0.2s;
       transform-origin: left;
     }
-    #wrap .news ul li .txt p:nth-of-type(3) a:hover:after{
+    #wrap .news ul li .txt p:nth-of-type(3) a:hover::before{
       content: "";
       position: absolute;
       width: 100%;
@@ -436,6 +451,35 @@
             <p>한화이글스, 코칭스태프 보직 변경 한화이글스는 후반기</p>
             <p><a href="#">READ MORE</a></p>
           </div>
+        </li>
+      </ul>
+    </div>
+    <div class="gotog">
+      <div>
+        <p><a href="#">VIEW ALL NEWS</a></p>
+      </div>
+    </div>
+    <div class="shop">
+      <ul>
+        <li>
+          <p><img src="images/240223_SPYDER_Eagles0014.jpg" alt="spyder1"></p>
+          <h6>어센틱 유니폼(화이트) 2024</h6>
+        </li>
+        <li>
+          <p><img src="images/240223_SPYDER_Eagles0023.jpg" alt="spyder2"></p>
+          <h6>어센틱 유니폼(오렌지) 2024</h6>
+        </li>
+        <li>
+          <p><img src="images/240313_SPYDER0409.jpg" alt="spyder3"></p>
+          <h6>한화이글스 어센틱 춘추점퍼</h6>
+        </li>
+        <li>
+          <p><img src="images/250.png" alt="spyder4"></p>
+          <h6>오렌지 유니폼 짐쌕</h6>
+        </li>
+        <li>
+          <p><img src="images/250+(2).png" alt="spyder5"></p>
+          <h6>레플리카 유니폼(그레이) 2024</h6>
         </li>
       </ul>
     </div>
