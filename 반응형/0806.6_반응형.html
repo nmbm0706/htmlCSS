@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @font-face {
+      font-family: vase1;
+      src: url(webfonts/EJRVQgYoZZY2vCFuvAFWzr8.woff2) format("woff2");
+    }
+    @font-face {
+      font-family: vase2;
+      src: url(webfonts/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXo.woff2) format("woff2");
+    }
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+    ul.weare{margin: 0 auto; width: 100%; max-width: 1132px; display: flex; text-align: center; margin-top: 50px;
+      gap: 20px;}
+    ul.weare li > a{display: block;}
+    ul.weare li > a img{height: 52px;}
+    ul.weare li .txt{word-break: keep-all;}
+    ul.weare li .txt a h3{color: #3f51b5; margin: 29px 0 20px; text-transform: uppercase; font-family: vase2;
+      font-weight: normal;}
+    ul.weare li .txt a p{color: #616161; font-size: 14px; font-family: vase1;}
+
+    ul.work{display: flex; flex-wrap: wrap; margin: 0 auto; margin-top: 100px; width: 100%; max-width: 1903px;}
+    ul.work li{width: 25%; position: relative; cursor: pointer;} 
+    ul.work li img{width: 100%; height: 100%; vertical-align: middle;}
+    ul.work li .txt{position: absolute; color: #fff; top: 40px; left: 40px; z-index: 1; transform: translateY(-30px); transition: 0.3s; transform-origin: top; opacity: 0;}
+    ul.work li:hover .txt{transform: translateY(0); opacity: 1;}
+    ul.work li .txt h1{font-size: 23px; margin-bottom: 8px; font-family: vase2; font-weight: normal;
+      text-transform: capitalize;}
+    ul.work li .txt p{font-size: 11px; font-family: vase2; font-weight: normal; text-transform: uppercase;}
+
+    ul.work li:after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: #3f51b5;
+      opacity: 0;
+      transition: 0.2s;
+    }
+    ul.work li:hover:after{
+      opacity: 0.86;
+    }
+
+    @media screen and (max-width: 1130px) {
+      ul.weare{gap: 30px;}
+      ul.work li{width: 50%;}
+    }
+    @media screen and (max-width: 768px){
+      ul.weare{flex-direction: column;}
+      ul.work{flex-direction: column;}
+      ul.work li{width: 100%;}
+    }
+  </style>
+</head>
+<body>
+  <ul class="weare">
+    <li>
+      <a href="#"><img src="images/promo01.png" alt="promo01"></a>
+      <div class="txt">
+        <a href="#">
+          <h3>home</h3>
+          <p>Lorem Ipsum is simply dummy text of
+            the printing and typesetting industry.</p>
+        </a>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="images/promo02.png" alt="promo02"></a>
+      <div class="txt">
+        <a href="#">
+          <h3>we are</h3>
+          <p>Lorem Ipsum is simply dummy text of
+            the printing and typesetting industry.</p>
+        </a>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="images/promo03.png" alt="promo03"></a>
+      <div class="txt">
+        <a href="#">
+          <h3>work</h3>
+          <p>Lorem Ipsum is simply dummy text of
+            the printing and typesetting industry.</p>
+        </a>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="images/promo04.png" alt="promo04"></a>
+      <div class="txt">
+        <a href="#">
+          <h3>blog</h3>
+          <p>Lorem Ipsum is simply dummy text of
+            the printing and typesetting industry.</p>
+        </a>
+      </div>
+    </li>
+  </ul>
+  
+  <ul class="work">
+    <li>
+      <img src="images/work01.jpg" alt="work01">
+      <div class="txt">
+        <h1>running</h1>
+        <p>web/print</p>
+      </div>
+    </li>
+    <li>
+      <img src="images/work02.jpg" alt="work02">
+      <div class="txt">
+        <h1>rugby</h1>
+        <p>web/print</p>
+      </div>
+    </li>
+    <li>
+      <img src="images/work03.jpg" alt="work03">
+      <div class="txt">
+        <h1>weight</h1>
+        <p>web/print</p>
+      </div>
+    </li>
+    <li>
+      <img src="images/work04.jpg" alt="work04">
+      <div class="txt">
+        <h1>marathon</h1>
+        <p>web/print</p>
+      </div>
+    </li>
+    <li>
+      <img src="images/work05.jpg" alt="work05">
+      <div class="txt">
+        <h1>boxing</h1>
+        <p>web/print</p>
+      </div>
+    </li>
+    <li>
+      <img src="images/work06.jpg" alt="work06">
+      <div class="txt">
+        <h1>ice hockey</h1>
+        <p>web/print</p>
+      </div>
+    </li>
+    <li>
+      <img src="images/work07.jpg" alt="work07">
+      <div class="txt">
+        <h1>skate board</h1>
+        <p>web/print</p>
+      </div>
+    </li>
+    <li>
+      <img src="images/work08.jpg" alt="work08">
+      <div class="txt">
+        <h1>basketball</h1>
+        <p>web/print</p>
+      </div>
+    </li>
+  </ul>
+</body>
+</html>
