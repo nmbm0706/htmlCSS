@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #444;}
+    #wrap{width: 100%; max-width: 940px; margin: 0 auto;}
+    #wrap .top{display: flex; margin: 30px 0; border: 1px solid #ddd; width: 100%; 
+      box-sizing: border-box;}
+    #wrap .top a{display: block;}
+    #wrap .top img{vertical-align: middle; object-fit: cover;}
+    #wrap .top div{padding: 25px 30px 25px; display: flex; flex-direction: column; gap: 20px;}
+    #wrap .top div h1{font-size: 20px; margin-bottom: 15px; letter-spacing: -2px;}
+    #wrap .top div p{font-size: 15px; width: 100%;}
+    #wrap .top div p:nth-child(2){height: 120px; line-height: 29px; letter-spacing: -1px;
+      text-overflow: clip; overflow: hidden;}
+    #wrap .top div p:last-child{display: flex; justify-content: space-between;}
+    #wrap .top div p:last-child span{display: inline-block; padding-top: 30px;}
+    
+    #wrap ul.list{display: flex; flex-wrap: wrap; width: 100%; gap: 30px; justify-content: space-between;}
+    #wrap ul.list li{width: calc(92% / 3); border: 1px solid #ddd;}
+    #wrap ul.list li img{width: 100%; object-fit: cover;}
+    #wrap ul.list div{padding: 15px;}
+    #wrap ul.list div h1{font-size: 16px; margin-bottom: 27px; letter-spacing: -2px;}
+    #wrap ul.list div p{font-size: 15px; display: flex; justify-content: space-between;}
+    #wrap ul.list div p span{display: inline-block;}
+
+    @media screen and (max-width: 960px) {
+      #wrap .top{display: flex; flex-direction: column; word-break: keep-all;}
+      #wrap .top img{width: 98%;}
+      #wrap .top div{padding: 15px;}
+      #wrap .top div h1{font-size: 14px; margin-bottom: 10px;}
+      #wrap .top div p:nth-child(2){font-size: 12px; margin-bottom: 20px; text-overflow: none; line-height: 20px; height: 40px; overflow: none;}
+      #wrap .top div p:last-child span{padding-top: 0;}
+
+      #wrap ul.list{gap: 15px; word-break: keep-all;}
+      #wrap ul.list li{width: 48%;}
+      #wrap ul.list li div{padding: 10px;}
+      #wrap ul.list li div h1{font-size: 14px; margin-bottom: 27px;}
+      #wrap ul.list div p{font-size: 12px;}
+      br{display: none;}
+    }
+    @media screen and (max-width: 640px){
+      #wrap{width: 95%;}
+      #wrap .top{display: none;}
+
+      #wrap ul.list li{width: 100%;}
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div class="top">
+      <a href="#">
+        <p><img src="images/shin1.jpg" alt="shin1"></p>
+        <div>
+          <h1>신세계푸드, 역대급 무더위에 삼계탕 간편식 인기 "앗 뜨거"</h1>
+          <p>역대급 무더위와 고물가 현상에 합리적인 가격으로 간편하게 보양 간편식 즐기는 '집보신' 수요 늘어
+            호텔컬렉션, 올반 등 삼계탕 간편식 7월 판매량 270% 급증··· 5~7월 판매량 50만개 돌파, 역대 최고 수준
+            전문점 수준의 맛과 품질 메뉴 외식물가 대비 3분의 2수준의 가격으로 즐길 수 있어 각광 무더위 길어질 것으로 예상··· 8월말까지 삼계탕 간편식 판매 강화 나서
+          </p>
+          <p>
+            <span>2024.08.07</span>
+            <span>보도자료</span>
+          </p>
+      </a>
+      </div>
+    </div>
+    <ul class="list">
+      <li>
+        <a href="#">
+          <p><img src="images/shin1.jpg" alt="shin1"></p>
+          <div>
+            <h1>신세계푸드, 역대급 무더위에 삼계탕<br> 간편식 인기 "앗 뜨거"</h1>
+            <p>
+              <span>2024.08.07</span>
+              <span>보도자료</span>
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/shin2.jpg" alt="shin2"></p>
+          <div>
+            <h1>신세계푸드 '데블스도어', 에반 윌리엄스<br> 협업 '하이볼 해피아워' 실시</h1>
+            <p>
+              <span>2024.08.05</span>
+              <span>보도자료</span>
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/shin3.jpg" alt="shin3"></p>
+          <div>
+            <h1>신세계푸드, 와인앤모어 협업…와인<br> 애호가 위한 ‘치즈 케이크 플래터’ 출시</h1>
+            <p>
+              <span>2024.07.31</span>
+              <span>보도자료</span>
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/shin4.jpg" alt="shin4"></p>
+          <div>
+            <h1>신세계푸드 ‘유아왓유잇’, ‘르 꼬르동<br> 블루’와 손잡고 프렌치 대안식 출시</h1>
+            <p>
+              <span>2024.07.29</span>
+              <span>보도자료</span>
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/shin5.jpg" alt="shin5"></p>
+          <div>
+            <h1>신세계푸드, 식품제조시설 폐기물 매립<br> 제로화 앞장…ESG 경영 적극 실천</h1>
+            <p>
+              <span>2024.07.29</span>
+              <span>보도자료</span>
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/shin6.jpg" alt="shin6"></p>
+          <div>
+            <h1>신세계푸드, 버니콘비니 협업 ‘브랜드<br> 콜라’ 스포츠 에디션 출시</h1>
+            <p>
+              <span>2024.07.25</span>
+              <span>보도자료</span>
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/shin7.jpg" alt="shin7"></p>
+          <div>
+            <h1>신세계푸드, 가루쌀 활용 100% 식물성<br> 음료 ‘유아왓유잇 라이스 베이스드’ 출시</h1>
+            <p>
+              <span>2024.07.024</span>
+              <span>보도자료</span>
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/shin8.jpg" alt="shin8"></p>
+          <div>
+            <h1>신세계푸드, 무더위에 얼려먹는 ‘쿨<br>(Cool)잼’ 먹거리 인기</h1>
+            <p>
+              <span>2024.07.17</span>
+              <span>보도자료</span>
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/shin9.png" alt="shin9"></p>
+          <div>
+            <h1>“Let’s Kimchi!”…신세계푸드 ‘노브랜드<br> 버거’, 김치 버거 2종 출시</h1>
+            <p>
+              <span>2024.07.11</span>
+              <span>보도자료</span>
+            </p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

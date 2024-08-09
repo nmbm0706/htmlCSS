@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+    #wrap{width: 95%; max-width: 990px; margin: 0 auto; text-align: center; letter-spacing: -1px;}
+    #wrap > h1{font-size: 30px; color: #101010; margin-bottom: 8px;}
+    #wrap > p{font-size: 18px; color: #303030; padding-bottom: 22px;}
+    #wrap ul.list{text-align: left; display: flex; flex-wrap: wrap; gap: 30px;}
+    #wrap ul.list li{width: 30%; border: 1px solid #d3d5da; box-sizing: border-box; position: relative;
+      overflow: hidden;}
+    #wrap ul.list li > a{color: #303030; width: 100%; height: 100%; display: block;}
+    #wrap ul.list li img{width: 98%; vertical-align: middle; margin: 3px;}
+    #wrap ul.list li .txt{padding: 10px 20px; display: flex; flex-direction: column; justify-content: space-between;}
+    #wrap ul.list li .txt p{color: #101010; font-weight: bold;}
+    #wrap ul.list li .txt h5{font-size: 14px; padding-top: 30px; font-weight: normal;}
+
+    #wrap ul.list li .bg{position: absolute; top: 0; left: 0; background: rgba(255, 255, 255, 0.9);
+      width: 100%; height: 100%; opacity: 0; transition: 0.3s; transform: translateY(50%);}
+    #wrap ul.list li .bg div{padding: 30px 20px; display: flex; flex-direction: column; height: 100%; justify-content: space-between; box-sizing: border-box;}
+    #wrap ul.list li .bg p{color: #101010; font-weight: bold;}
+    #wrap ul.list li .bg h5{font-size: 14px; font-weight: normal; color: #303030;}
+    #wrap ul.list li .bg p:last-child{text-align: center;}
+    #wrap ul.list li .bg p:last-child a{width: 100%; display: block; background: #404040; 
+      color: #fff; border-radius: 2px; line-height: 40px;}
+
+    #wrap ul.list li:hover .bg{opacity: 1; transform: translateY(0);}
+
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <h1>다양한 혜택 확인하세요!</h1>
+    <p>고객님을 위한 특별한 보험이벤트, 여기서만 확인!</p>
+    <ul class="list">
+      <li>
+        <a href="#">
+          <p><img src="images/sam1.png" alt="sam1"></p>
+          <div class="txt">
+            <p>우리집 댕냥이 펫보험은 메리츠화재 펫퍼민트</p>
+            <h5>2024.08.01 ~ 2024.09.30</h5>
+          </div>
+          <div class="bg">
+            <div>
+              <p>우리집 댕냥이 펫보험은 메리츠화재 펫퍼민트</p>
+              <h5>2024.08.01 ~ 2024.09.30</h5>
+              <p><a href="#">자세히 보기</a></p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/sam2.png" alt="sam2"></p>
+          <div class="txt">
+            <p>운전자 보험료 월 1만원 이상 결제시 1만원 신세계 상품권 혜택</p>
+            <h5>2024.08.01 ~ 2024.09.30</h5>
+          </div>
+          <div class="bg">
+            <div>
+              <p>운전자 보험료 월 1만원 이상 결제시 1만원 신세계 상품권 혜택</p>
+              <h5>2024.08.01 ~ 2024.09.30</h5>
+              <p><a href="#">자세히 보기</a></p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/sam3.png" alt="sam3"></p>
+          <div class="txt">
+            <p>미래에셋생명 온라인보험 최대 3만원 상품권 혜택</p>
+            <h5>2024.08.01 ~ 2024.09.30</h5>
+          </div>
+          <div class="bg">
+            <div>
+              <p>미래에셋생명 온라인보험 최대 3만원 상품권 혜택</p>
+              <h5>2024.08.01 ~ 2024.09.30</h5>
+              <p><a href="#">자세히 보기</a></p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/sam4.png" alt="sam4"></p>
+          <div class="txt">
+            <p>100세까지 든든한 AIA생명 암보험</p>
+            <h5>2024.08.01 ~ 2024.09.30</h5>
+          </div>
+          <div class="bg">
+            <div>
+              <p>100세까지 든든한 AIA생명 암보험</p>
+              <h5>2024.08.01 ~ 2024.09.30</h5>
+              <p><a href="#">자세히 보기</a></p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/sam5.png" alt="sam5"></p>
+          <div class="txt">
+            <p>카드 채무가 면제되는 AIA생명 건강보험</p>
+            <h5>2024.08.01 ~ 2024.09.30</h5>
+          </div>
+          <div class="bg">
+            <div>
+              <p>카드 채무가 면제되는 AIA생명 건강보험</p>
+              <h5>2024.08.01 ~ 2024.09.30</h5>
+              <p><a href="#">자세히 보기</a></p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/sam6.png" alt="sam6"></p>
+          <div class="txt">
+            <p>내 보험 점검하고 부족한 보장 채우세요</p>
+            <h5>2024.08.01 ~ 2024.09.30</h5>
+          </div>
+          <div class="bg">
+            <div>
+              <p>내 보험 점검하고 부족한 보장 채우세요</p>
+              <h5>2024.08.01 ~ 2024.09.30</h5>
+              <p><a href="#">자세히 보기</a></p>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
