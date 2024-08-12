@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @font-face {
+      font-family: notosansKR;
+      src: url(webfonts/NotoSansKR-Medium.ttf);
+    }
+    *{margin: 0; padding: 0; font-family: notosansKR;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+    header{width: 100%; max-width: 1903px; height: 40px; text-align: center; background: #222;
+      z-index: 1; position: fixed;}
+    header div{display: flex; justify-content: center;}
+    header div h1 a{font-size: 16px; color: #fff; line-height: 40px; display: block;
+      font-weight: normal;}
+    header p a{display: block; line-height: 40px; position: absolute; top: 0; right: 25px;}
+    header p a img{vertical-align: middle;}
+
+    .main{width: 100%; max-width: 1903px;}
+
+    .main .left{width: 40%; height: 100vh; position: fixed;}
+    .main .left .m{}
+    .main .left .m a{display: block; position: relative;}
+    .main .left .m a:after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: rgba(0, 0, 0, 0.375);
+    }
+    .main .left .m a img{width: 100%; height: 100vh; object-fit: cover;}
+    .main .left .logo a{display: block; position: absolute; left: 60px; top: 60px;}
+    .main .left .logo a img{height: 50px;}
+    .main .left .txt{position: absolute; left: 0; bottom: 0; color: #fff; padding: 0 50px;
+      box-sizing: border-box; letter-spacing: -1px; margin-bottom: 50px;}
+    .main .left .txt h2{text-transform: uppercase; font-size: 24px;}
+    .main .left .txt h1 a{font-size: 56px; color: #fff; display: block; margin-top: 14px;}
+    .main .left .txt h3{font-size: 20px; margin-top: 17px; font-weight: normal;}
+    .main .left .txt p{font-size: 20px; margin-top: 15px;}
+
+    .main .right{width: 60%; float: right;}
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1><a href="#">마음 성장 플랫폼, 플레이라이프</a></h1>
+    </div>
+    <p><a href="#"><img src="images/icon_banner_close.svg" alt="close"></a></p>
+  </header>
+  <div class="main">
+    <div class="left">
+      <p class="m"><a href="#"><img src="images/main.jpg" alt="main"></a></p>
+      <p class="logo"><a href="#"><img src="images/playlife_logo.png" alt="logo"></a></p>
+      <div class="txt">
+        <h2>people</h2>
+        <h1><a href="#">기록은 미래의 나에게 보내는<br> 다정한 안부</a></h1>
+        <h3>"기록이 진해질수록 허무함은 희미해져요"</h3>
+        <p><strong>김신지</strong> 에세이 작가</p>
+      </div>
+    </div>
+    <div class="right">
+      <ul>
+        <li>
+          <ul>
+            <li>  
+              <p><a href="#"><img src="images/m01.jpg" alt="m01"></a></p>
+              <div class="txt">
+                <h2>people</h2>
+                <h1><a href="#">이어지는 삶 속에서 새로 발견한 것</a></h1>
+                <h3>"나만의 목표를 갖고 작은 시도를 계속 해보는 게 중요해요"</h3>
+                <p><strong>박찬종</strong>크리에이터, 패러사이클링 선수</p>
+              </div>
+            </li>
+            <li>  
+              <p><a href="#"><img src="images/m03.jpg" alt="m03"></a></p>
+              <div class="txt">
+                <h2>people</h2>
+                <h1><a href="#">잘하고 싶은 마음보다 일단 '시작'하는 마음으로</a></h1>
+                <h3>"작은 목표를 향해 한 걸음, 한 걸음 내딛다 보면 '끝'도 있더라고요"</h3>
+                <p><strong>서귤</strong>작가</p>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li>  
+              <p><a href="#"><img src="images/m02.jpg" alt="m02"></a></p>
+              <div class="txt">
+                <h2>people</h2>
+                <h1><a href="#">행복은 아주 작은 것에서부터</a></h1>
+                <h3>"살아가는 모든 순간, 아이와 같은 마음이 필요해요"</h3>
+                <p><strong>누아</strong>일러스트레이터</p>
+              </div>
+            </li>
+            <li>  
+              <p><a href="#"><img src="images/m04.jpg" alt="m04"></a></p>
+              <div class="txt">
+                <h2>people</h2>
+                <h1><a href="#">기사를 쓰는데 이렇게까지</a></h1>
+                <h3>"휠체어를 타고 바퀴를 굴리자마자 '내가 알던 세상이 아니구나.' 느꼈어요."</h3>
+                <p><strong>남형도</strong>기자</p>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
