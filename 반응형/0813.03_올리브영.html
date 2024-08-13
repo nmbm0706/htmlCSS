@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @font-face {
+      font-family: OYgretaSans;
+      src: url(webfonts/OYGretaSans-Bd119-2e02aff78c4c67f09a119004b5c4b8b7.woff) format("woff");
+    }
+    @font-face {
+      font-family: pretendard;
+      src: url(webfonts/Pretendard-Medium-67b55f422f5b68b39103739bd4261c88.woff2.crdownload);
+    }
+    @font-face {
+      font-family: nanumbarunGOTHIC;
+      src: url(webfonts/NanumBarunGothic.otf) format("opentype");
+    }
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #000;}
+    html{scroll-behavior: smooth;}
+    .wrap{display: flex; width: 90%; max-width: 1915px; margin: 50px auto; justify-content: center;}
+    
+    ul.left{width: 40%; height: 100%; display: flex; flex-direction: column; gap: 20px;
+      position: sticky; top: 100px; font-family: pretendard, nanumbarunGOTHIC;}
+    ul.left h1{font-size: 54px; margin-bottom: 60px; font-family: OYgretaSans;} 
+    ul.left li a{display: inline-block; color: #565e65; font-size: 18px;}
+
+    ul.right{width: 60%; margin-left: 100px; display: flex; flex-direction: column; justify-content: space-between; gap: 150px; letter-spacing: -1px;}
+    ul.right li{display: flex; width: 100%;}
+    ul.right h3{font-size: 18px; color: #565e65;}
+    ul.right div{margin-left: 100px;}
+    ul.right li h4{display: none; font-size: 12px; color: #565e65; margin-bottom: 10px;}
+    ul.right li p{}
+    ul.right li p img{height: 400px; vertical-align: middle; object-fit: cover;}
+    ul.right li h1{font-size: 30px; margin-top: 46px; font-family: pretendard, nanumbarunGOTHIC;
+      line-height: 40px;}
+    ul.right li h2{font-size: 18px; color: #565e65; margin-top: 34px; font-family: pretendard, nanumbarunGOTHIC; font-weight: normal; line-height: 30px;}
+    ul.right li span{display: inline-block; padding-right: 15px; position: relative; overflow: hidden;
+       margin-top: 30px;}
+    ul.right li span a{font-size: 16px; padding-bottom: 2px; border-bottom: 1px solid #000;
+      font-weight: bold; font-family: pretendard, nanumbarunGOTHIC; display: block;
+      }
+    ul.right li span:before{
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: url(https://corp.oliveyoung.com/img/pc-svg-418cd3751e7d1a9a4c3a8099b78970fd.svg);
+      right: 0;
+      top: 5px;
+      background-position: -272px -324px;
+      transition: 0.3s;
+    }
+    ul.right li span::after{
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: url(https://corp.oliveyoung.com/img/pc-svg-418cd3751e7d1a9a4c3a8099b78970fd.svg);
+      right: 0;
+      top: 25px;
+      background-position: -272px -324px;
+      transition: 0.3s;
+    }
+    ul.right li span:hover:before{
+      transform: translateY(-18px);
+    }
+    ul.right li span:hover:after{
+      transform: translateY(-20px);
+    }
+
+    @media screen and (max-width: 1439px) {
+      .wrap{width: 90%;}
+      ul.right li p img{width: 100%; height: 100%;}
+    }
+    @media screen and (max-width: 1169px) {
+      .wrap{width: 98%; flex-direction: column;}
+      ul.left{position: relative; display: block; width: 100%; top: 0;}
+      ul.left h1{font-size: 26px; padding-left: 7px; margin-bottom: 50px;}
+      ul.left li{display: none;}
+
+      ul.right{width: 100%; margin-left: 0; gap: 50px;}
+      ul.right li{}
+      ul.right div{margin-left: 13px; }
+      ul.right li p img{width: 100%;}
+      ul.right li h3{width: 10px; font-size: 12px; color: #82dc28; }
+      ul.right li h4{display: block;}
+      ul.right li div h1{font-size: 18px; margin-top: 30px; line-height: 20px;}
+      ul.right li div h2{font-size: 13px; margin-top: 20px; line-height: 20px;}
+      ul.right li div span a{font-size: 13px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <ul class="left">
+      <h1>OLIVE YOUNG<br>Platforms</h1>
+        <li><a href="#con1">올리브영 매장</a></li>
+        <li><a href="#con2">올리브영 Online (국내)</a></li>
+        <li><a href="#con3">올리브영 글로벌</a></li>
+        <li><a href="#con4">디플롯</a></li>
+    </ul>
+    <ul class="right">
+      <li>
+        <h3>01</h3>
+        <div id="con1">
+          <h4>올리브영 매장 (국내)</h4>
+          <p><img src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform1-cf428ca64855adc4a1062251b83cf683.jpg;jsessionid=EFFA603D5F0C9F8692718CBEE5F8C41C" alt="oliveyoung1"></p>
+          <h1>고객과 가장 가까운 곳에서<br>건강한 아름다움을 제안합니다.</h1>
+          <h2>우리는 1,300여개의 매장을 기반으로 고객에게 뷰티&헬스 상품을 큐레이션합니다.<br>
+            또한 체험형 콘텐츠와 커머스의 연계를 통해 파트너사들에게<br>
+            매력적인 브랜딩, 마케팅 채널로 진화하고 있습니다.</h2>
+          <span><a href="#">올리브영 매장이 보고 싶다면?</a></span>
+        </div>
+      </li>
+      <li>
+        <h3>02</h3>
+        <div id="con2">
+          <h4>올리브영 Online (국내)</h4>
+          <p><img src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform2-777eecd5b0d28e7c17848bfe3dffe645.jpg" alt="oliveyoung2"></p>
+          <h1>고객이 건강한 아름다움을 찾아가는<br>온라인 PLAYGROUND를 제공합니다.</h1>
+          <h2>우리는 차별화된 온라인 콘텐츠와 AI기술 기반 상품 추천을 통해 월 이용자 수 480만명,<br>
+            멤버십 회원 수 1,400만명 이상의 뷰티&헬스 커뮤니티를 구현했습니다.<br>
+            또한 업계 최초 당일 배송 서비스인 오늘드림을 실행하여 고객경험을 혁신했습니다.</h2>
+          <span><a href="#">올리브영 Online 서비스가 궁금하다면?</a></span>
+        </div>
+      </li>
+      <li>
+        <h3>03</h3>
+        <div id="con3">
+          <h4>올리브영 글로벌</h4>
+          <p><img src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform3-c78371c66bba75b227096ecd0f128e12.jpg" alt="oliveyoung3"></p>
+          <h1>전세계에 한국의<br>뷰티&헬스를 알립니다.</h1>
+          <h2>우리는 한국의 뷰티&헬스 브랜드들이 세계로 뻗어 나가는 교두보 역할을 수행합니다.<br>
+            2019년 런칭한 글로벌몰과 연간 약 300만명 이상이 외국인 고객이 방문하는 국내 글로벌 특화매장은<br>
+            파트너사와 함께 글로벌 시장에서 동반 성장을 할 수 있는 핵심 원동력입니다.</h2>
+          <span><a href="#">올리브영의 글로벌 플랫폼을 보고싶다면?</a></span>
+        </div>
+      </li>
+      <li>
+        <h3>04</h3>
+        <div id="con4">
+          <h4>디플롯</h4>
+          <p><img src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform4-7c45898de0bdfb1de922247a126d8886.jpg" alt="oliveyoung4"></p>
+          <h1>가치지향 라이프스타일 플랫폼을 통해<br>고객에게 다양한 즐거움을 선물합니다.</h1>
+          <h2>고객이 뷰티&헬스를 넘어 라이프스타일 전반에서 자신만의 가치와<br>
+            취향을 반영한 브랜드를 탐색할 수 있습니다.<br>
+            이러한 고객 경험의 확장을 통해 우리는 뷰티&헬스를 넘어선<br>
+            종합 라이프스타일 플랫폼으로 도약합니다.</h2>
+          <span><a href="#">D.PLOT의 감각적인 제품들이 궁금하다면?</a></span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
