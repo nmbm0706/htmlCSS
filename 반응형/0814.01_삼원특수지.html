@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @font-face {
+      font-family: pretendardM;
+      src: url(webfonts/Pretendard-Medium-67b55f422f5b68b39103739bd4261c88.woff2.crdownload);
+    }
+    *{margin: 0; padding: 0; font-family: pretendardM, sans-serif;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #000;}
+    .main{width: 90%; max-width: 1714px; margin: 0 auto; display: flex;}
+    .main .left{width: 50%; position: sticky; top: 0; height: 100%;}
+    .main .left > .txt{width: 100%;}
+    .main .left > .txt h2{font-size: 22px; color: rgba(0, 0, 0, 0.5); font-weight: normal;}
+    .main .left > .txt h1{font-size: 96px; margin-top: 16px;}
+    .main .left > .txt p{display: inline-block; border: 2px solid #000; border-radius: 50px; 
+      margin-top: 32px;}
+    .main .left .txt p a{font-size: 20px; display: flex; gap: 5px; font-weight: bold;
+      padding: 0 32px; align-items: center; height: 56px;}
+    .main .left .txt p a span img{vertical-align: middle;}
+    .main .left .pic{margin-top: 100px; position: relative; width: 68%; word-break: keep-all;
+      overflow: hidden;}
+    .main .left .pic p img{width: 100%; object-fit: cover;}
+    .main .left .pic .txt{position: absolute; top: 80px; left: 50px; width: 85%;}
+    .main .left .pic .txt h1{font-size: 40px; color: #3f3f46; letter-spacing: -5px;}
+    .main .left .pic .txt h4{color: #3f3f46; margin-top: 16px;}
+
+    .main .right{width: 50%; display: flex;}
+    .main .right ul{width: 50%;}
+    .main .right ul:nth-child(1){padding-top: 200px;}
+    .main .right ul li{padding: 28px 24px;}
+    .main .right ul li a{width: 100%; height: 100%; position: relative;}
+    .main .right ul li a p img{width: 100%; object-fit: cover; height: 100%; vertical-align: middle;}
+    .main .right ul li a .txt{position: absolute; bottom: 0; left: 0; padding: 24px 24px 44px;
+      background: #000; width: 100%; box-sizing: border-box; letter-spacing: -2px;}
+    .main .right ul li a .txt h2{color: rgba(255,255,255,0.4); font-size: 16px;}
+    .main .right ul li a .txt h1{color: #fff; font-size: 24px; margin-top: 4px;}
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="left">
+      <div class="txt">
+        <h2>Samwon Gray Paper:다채로운 매력의 그레이 페이퍼</h2>
+        <h1>Monthly Paper</h1>
+        <p><a href="#"><span>제품보기</span><span><img src="https://www.samwonpaper.com/resources/_asset/pc/common/images/icon/icon-more-long-arrow-black.png" alt="arrow"></span></a></p>
+      </div>
+      <div class="pic">
+        <p><img src="https://www.samwonpaper.com/storage/cms/PRODUCTMONTH/202407/d524e42f-a2bd-4a8b-a1ec-3ec4b6da1058.jpg" alt="leftmain"></p>
+        <div class="txt">
+          <h1>다채로운 매력의 소유자,<br>그레이 페이퍼를 소개합니다.</h1>
+          <h4>July 2024</h4>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <ul>
+        <li>
+          <a href="#">
+            <p><img src="https://www.samwonpaper.com/storage/cms/PACKAGEBOOK/task/SIR-99_MA.png" alt="main1"></p>
+            <div class="txt">
+              <h2>시리오러프</h2>
+              <h1>시리오러프</h1>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="https://www.samwonpaper.com/storage/cms/PACKAGEBOOK/task/MTRC-99_MA.png" alt="main2"></p>
+            <div class="txt">
+              <h2>마테리카</h2>
+              <h1>마테리카</h1>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="https://www.samwonpaper.com/storage/cms/PACKAGEBOOK/task/SKIN-99_MA.png" alt="main3"></p>
+            <div class="txt">
+              <h2>큐리어스 스킨</h2>
+              <h1>큐리어스 스킨</h1>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="#">
+            <p><img src="https://www.samwonpaper.com/storage/cms/PACKAGEBOOK/task/MOON-99_MA.png" alt="main4"></p>
+            <div class="txt">
+              <h2>문보드</h2>
+              <h1>문보드</h1>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="https://www.samwonpaper.com/storage/cms/PACKAGEBOOK/task/RMK-99_MA.png" alt="main5"></p>
+            <div class="txt">
+              <h2>리메이크</h2>
+              <h1>리메이크</h1>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="https://www.samwonpaper.com/storage/cms/PACKAGEBOOK/task/CMT-99_MA.png" alt="main6"></p>
+            <div class="txt">
+              <h2>큐리어스 매터</h2>
+              <h1>큐리어스 매터</h1>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
