@@ -44,14 +44,14 @@
 
     .main{display: flex;}
 
-    .main .left{width: 33%; position: sticky; height: 100vh; top: 80px; background: #f6c6b8;
-      }
+    .main .left{width: 33%; position: sticky; height: 100vh; top: 80px; background: #f6c6b8;}
     .main .left > h4{position: absolute; bottom: 120px; left: 0; font-size: 14px; color: #86260e;
       padding: 0 5% 0 7%;}
     .main .left p img{width: 100%; height: 100%; object-fit: cover;}
 
     .main .right{flex: 1; margin: 0 auto; background: #f4f4f4;}
-    .main .right ul{display: flex; flex-direction: column; padding: 80px 5% 30px 10%; box-sizing: border-box;}
+    .main .right ul{display: flex; flex-direction: column; padding: 80px 5% 30px 10%; 
+      box-sizing: border-box;}
     .main .right ul li{margin-bottom: 20px;}
     .main .right ul li a{display: flex; align-items: center; justify-content: space-between;}
     .main .right ul li .txt{white-space: nowrap;}
@@ -92,6 +92,7 @@
       .main .right ul li .txt h1 strong{margin-top: 7px;}
       .main .right ul li .txt p{margin-bottom: 18px;}
       .main .right ul li:nth-child(even) .txt p {margin: 0;}
+      .main .right ul li:nth-child(even) .txt h4 {margin-left: 0;}
     }
     @media screen and (max-width: 800px) {
       header{display: none;}
