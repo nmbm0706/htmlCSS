@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul#list{display: flex; list-style: none; margin: 0 auto; width: 100%; max-width: 1400px;
+      justify-content: center; align-self: center; padding: 80px 0; text-align: center;
+      gap: 20px;}
+    ul#list li{width: 200px; font-size: 20px; height: 54px; line-height: 54px;
+      border-radius: 50px; background: rgba(51,51,51,0.8); color: rgba(255, 255, 255, 0.5);
+      font-weight: bold;}
+    div.main{margin: 0 auto; width: 100%; text-align: center;}
+    div.main .sub{position: absolute; width: 100%; padding: 7.7% 0; background-position: center;
+      background-size: cover; display: none;}
+    div.main .sub1{background-image: url(https://www.lotternd.com/assets/images/sub/research/research-ban1.jpg);}
+    div.main .sub2{background-image: url(https://www.lotternd.com/assets/images/sub/research/research-ban2.jpg);}
+    div.main .sub3{background-image: url(https://www.lotternd.com/assets/images/sub/research/research-ban3.jpg);}
+    div.main .sub4{background-image: url(https://www.lotternd.com/assets/images/sub/research/research-ban4.jpg);}
+    div.main .sub5{background-image: url(https://www.lotternd.com/assets/images/sub/research/research-ban5.jpg);}
+    div.main .sub6{background-image: url(https://www.lotternd.com/assets/images/sub/research/research-ban6.jpg);}
+    div.main .sub h1{font-size: 38px; color: #111; margin-bottom: 15px;}
+    div.main .sub p{font-size: 22px; color: #333;}
+
+    .main .sub.on{display: block;}
+    #list li.check{background: #da291c; color: #fff;}
+  </style>
+</head>
+<body>
+  <ul id="list">
+    <li>연구개발</li>
+    <li>기초연구</li>
+    <li>패키지연구</li>
+    <li>기술연구</li>
+    <li>안전관리</li>
+    <li>연구전략</li>
+  </ul>
+  <div class="main">
+    <div class="sub sub1">
+      <h1>연구개발</h1>
+      <p>소비자의 니즈와 시장 선호도에 부합하는 신제품을 출시하고 품질을 개선합니다.</p>
+    </div>
+    <div class="sub sub2">
+      <h1>기초연구</h1>
+      <p>바이오 연구, 신소재 발굴 등 개발의 기틀을 마련하고 신규 솔루션을 개척합니다.</p>
+    </div>
+    <div class="sub sub3">
+      <h1>패키지연구</h1>
+      <p>제품 포장을 설계하고 디자인하여 품질 유지와 아이덴티티 강화를 이룹니다.</p>
+    </div>
+    <div class="sub sub4">
+      <h1>기술연구</h1>
+      <p>첨단 기술을 현장에 적용하여 식품 제조 방식의 선진화를 이끕니다.</p>
+    </div>
+    <div class="sub sub5">
+      <h1>안전관리</h1>
+      <p>위생 관리와 위해 사고 에방을 통해 롯데 식품 및 상품의 안전을 책임집니다.</p>
+    </div>
+    <div class="sub sub6">
+      <h1>연구전략</h1>
+      <p>진행 방향을 설계하고 실질적 연구 활동을 지원합니다.</p>
+    </div>
+  </div>
+
+  <script>
+    let btn = document.querySelectorAll("#list li")[0];
+    let sec = document.querySelectorAll(".main .sub")[0];
+
+    btn.classList.add("check");
+    sec.classList.add("on")
+
+    function myfnc(){
+      document.querySelectorAll("#list li").forEach(function(keys,item){
+        keys.classList.remove("check");
+      });
+    }
+
+    document.querySelectorAll("#list li").forEach(function(keys,item){
+      keys.onclick=function(){
+        console.log(keys);
+        myfnc();
+        keys.classList.add("check");
+        document.querySelectorAll(".main .sub").forEach(function(value, keys){
+          value.classList.remove("on");
+        })
+        document.querySelectorAll(".main .sub")[item].classList.add("on");
+      }
+    });
+  </script>
+</body>
+</html>
