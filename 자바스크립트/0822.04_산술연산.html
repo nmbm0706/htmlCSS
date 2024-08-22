@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+
+	</style>
+</head>
+<body>
+
+
+	<script>
+    let a = 10;
+    let b = 20;
+    a = 30;
+    document.write("a : " + a);
+    document.write("<br> a + b : " + (a + b));
+    document.write("<br> a - b : " + (a - b));
+    document.write("<br> a * b : " + (a * b));
+    document.write("<br> a / b : " + (a / b));
+    document.write("<br> a % b : " + (a % b));
+    document.write("<br> a ** b : " + (a ** b));
+    // + 대신 컴마(,) 써도 됨 (좌우의 식을 연결)
+    document.write("<br> ++a : " + (++a));
+    document.write("<br> a++ : " + (a++));
+
+    let c = "하나";
+    let d = "둘";
+    let e = "셋";
+    let txt;
+    txt = "";
+    txt += c
+    txt = txt + c; //txt = 하나
+    txt = txt + d; //txt = 하나 둘
+    document.write(txt)
+	</script>
+</body>
+</html>
