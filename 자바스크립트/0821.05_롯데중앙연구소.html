@@ -70,10 +70,10 @@
     let sec = document.querySelectorAll(".main .sub")[0];
 
     btn.classList.add("check");
-    sec.classList.add("on")
+    sec.classList.add("on");
 
     function myfnc(){
-      document.querySelectorAll("#list li").forEach(function(keys,item){
+      btn.forEach(function(keys,item){
         keys.classList.remove("check");
       });
     }

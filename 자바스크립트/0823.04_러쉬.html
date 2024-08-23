@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    #wrap{}
+    #wrap > div{background-image: url(https://weare.lush.co.kr/images/main_value01.jpg); width: 100%;
+      height: 720px; position: absolute; top: 0; left: 0; background-repeat: no-repeat;
+      background-position: center; background-size: cover; display: none;}
+    #wrap > div.on{display: block;}
+    #wrap ul{width: 894px; height: 454px; display: flex; flex-wrap: wrap; margin: 130px auto;
+      gap: 100px; justify-content: space-between; align-items: center; position: relative; z-index: 1;}
+    #wrap ul li{width: 180px; height: 180px; border-radius: 50%;
+      background-position: center; background-repeat: no-repeat;}
+    #wrap ul li.on{background-color: #222;}
+    #wrap ul li:nth-child(1){background-image: url(https://weare.lush.co.kr/images/ico_main_value01.svg);}
+    #wrap ul li:nth-child(2){background-image: url(https://weare.lush.co.kr/images/ico_main_value02.svg);}
+    #wrap ul li:nth-child(3){background-image: url(https://weare.lush.co.kr/images/ico_main_value03.svg);}
+    #wrap ul li:nth-child(4){background-image: url(https://weare.lush.co.kr/images/ico_main_value04.svg);}
+    #wrap ul li:nth-child(5){background-image: url(https://weare.lush.co.kr/images/ico_main_value05.svg);}
+    #wrap ul li:nth-child(6){background-image: url(https://weare.lush.co.kr/images/ico_main_value06.svg);}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <div></div>
+  </div>
+
+  <script>
+    let btn = document.querySelectorAll("#wrap ul li");
+    let bg = document.querySelectorAll("#wrap > div");
+
+    // document.querySelector("#wrap ul li").style.backgroundColor="transparent"
+    
+    btn.classList.add("on");
+
+    function btn0(){
+      btn.forEach(function(value,key){
+        value.querySelector("#wrap ul li").classList.remove("on");
+      })
+    }
+
+    btn.forEach(function(value,key){
+      value.onmouseenter=function(){
+        btn0();
+        btn[key].querySelector("#wrap ul li").classList.add("on");
+        bg.forEach(function(value,key){
+          value.classList.add("on")
+        })
+
+      }
+    })
+
+  </script>
+</body>
+</html>
