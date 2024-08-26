@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    .txt{display: flex; margin: 0 auto; width: 100%; height: 44px; max-width: 1200px;
+      justify-content: center; align-items: center; gap: 30px; margin-top: 50px;}
+    .txt p{border: 1px solid #ccc; padding: 0 16px; font-size: 14px; line-height: 44px;
+      color: #111; display: inline-block; cursor: pointer;}
+    
+    div.con{width: 100%; height: 904px; position: absolute; margin: 0 auto; display: flex;
+      flex-direction: column; align-items: center; justify-content: center; text-align: center;}
+    div.con .title{width: 240px; background-position: center; background-size: contain;
+      background-repeat: no-repeat; padding: 130px 0 70px; box-sizing: border-box;}
+    div.con .main{width: 100%; height: 624px; background-position: center; background-size: cover;
+      background-repeat: no-repeat; display: flex; justify-content: center; align-items: center;}
+    div.con .main p{color: #fff; font-size: 36px; display: none;}
+    div.con .main p.on{display: block;}
+  </style>
+</head>
+<body>
+  <div class="txt">
+    <p>ELLE</p>
+    <p>COSMOPOLITAN</p>
+    <p>Harper's BAZAAR</p>
+    <p>ESQUIRE</p>
+    <p>STUDIO DOT</p>
+    <p>YEET</p>
+  </div>
+  <div class="con con1">
+    <div class="title"></div>
+    <div class="main">
+      <p>NO.1<br>FASHION & LIFESTYLE<br>MEDIA</p>
+    </div>
+  </div>
+  <div class="con con2">
+    <div class="title"></div>
+    <div class="main">
+      <p>Fun, Fearless, Female</p>
+    </div>
+  </div>
+  <div class="con con3">
+    <div class="title"></div>
+    <div class="main">
+      <p>Realistic<br>Inspiration from<br>Artistic Creation</p>
+    </div>
+  </div>
+  <div class="con con4">
+    <div class="title"></div>
+    <div class="main">
+      <p>MAN<br>AT<br>HIS BEST</p>
+    </div>
+  </div>
+  <div class="con con5">
+    <div class="title"></div>
+    <div class="main">
+      <p>콘텐츠로 증명하는 '스튜디오닷'<br>브랜드와 고객의 니즈를 넘나드는<br>A to Z 콘텐츠 솔루션 실행</p>
+    </div>
+  </div>
+  <div class="con con6">
+    <div class="title"></div>
+    <div class="main">
+      <p>Little<br>Pleasures<br>of Life</p>
+    </div>
+  </div>
+  
+  <script>
+    let txt = document.querySelectorAll(".txt p");
+    let title = "url(images/title1.svg)";
+    let bg = "url(images/img_visual1.png)";
+    // let subTxt = document.querySelector(".con .main p");
+
+    document.querySelector(".txt p").style.backgroundColor = "#211955";
+    document.querySelector(".txt p").style.color = "#fff";
+    document.querySelector(".con .title").style.backgroundImage = "url(images/title1.svg)";
+    document.querySelector(".con .main").style.backgroundImage = "url(images/img_visual1.png)";
+    // document.querySelector(".con .main p").classList.add("on")
+
+    function myfnc(){
+      txt.forEach(function(v,k){
+        v.style.backgroundColor = "transparent";
+        v.style.color = "#111";
+        
+      })
+    }
+    // function subTxtOff(){
+    //   document.querySelector(".con .main p").classList.remove("on");
+    // }
+
+    txt.forEach(function(v,k){
+      v.onclick=function(){
+        myfnc();
+        txt[k].style.backgroundColor = "#211955";
+        txt[k].style.color = "#fff";
+        document.querySelector(".con .title").style.backgroundImage = title.replace(title.substr(-6,1),k+1)
+        document.querySelector(".con .main").style.backgroundImage = bg.replace(bg.substr(-6,1),k+1)
+        
+        // subTxt.forEach(function(v,k){
+        //   subTxtOff();
+        //   subTxt[k].classList.classList.add("on")
+        // })
+      }
+    })
+  </script>
+  
+</body>
+</html>
