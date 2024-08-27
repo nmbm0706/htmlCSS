@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    .list{width: 1520px; margin: 0 auto;}
+    .list li .txt{display: flex; justify-content: space-between;}
+    .list li .txt p{font-size: 32px; padding: 40px 120px 40px 20px; font-weight: bold;
+      border-bottom: 1px solid #ebebeb; width: 100%; cursor: pointer;}
+    .list li .txt span{display: inline-block; position: relative; transition: 0.5s;
+      display: block;}
+    .list li .txt .con1{transform-origin: center;}
+    .list li .txt .con1::after{
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 3px;
+      height: 23px;
+      background: #000;
+      transform: translate(-50%, -50%);
+      opacity: 1;
+      
+    }
+    .list li .txt .con1.on{transform: rotate(90deg); opacity: 0;}
+    .list li .txt .con2::after{
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 23px;
+      height: 3px;
+      background: #000;
+      transform: translate(-50%, -50%);
+    }
+    /* .list li p::before{
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 23px;
+      height: 3px;
+      background: #000;
+      transform: translateY(-50%);
+    }
+    .list li p::after{
+      content: "";
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      width: 3px;
+      height: 23px;
+      background: #000;
+      transform: translateY(-50%);
+    } */
+    .list li img{display: none;}
+    .list li img.on{display: block;}
+
+  </style>
+</head>
+<body>
+  <ul class="list">
+    <li>
+      <div class="txt">
+        <p>GS파워</p>
+        <span class="con1"></span>
+        <span class="con2"></span>
+      </div>
+      <img src="images/img_collective_a01.jpg" alt="a01">
+    </li>
+    <li>
+      <div class="txt">
+        <p>인천종합에너지</p>
+        <span class="con1"></span>
+        <span class="con2"></span>
+      </div>
+      <img src="images/img_collective_b01.jpg" alt="b01">
+    </li>
+  </ul>
+
+  <script>
+    let btn = document.querySelectorAll(".list li");
+
+    btn.forEach(function(v,k){
+      v.onclick = function(){
+        btn[k].querySelector(".list li img").classList.toggle("on");
+        btn[k].querySelector(".list li .txt .con1").classList.toggle("on");
+      }
+    })
+  </script>
+</body>
+</html>
