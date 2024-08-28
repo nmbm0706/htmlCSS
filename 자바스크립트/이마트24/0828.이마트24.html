@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @font-face {
+      font-family: nexonL;
+      src: url(webfonts/NexonLv2GothicRegular.woff2) format("woff2");
+    }
+    @font-face {
+      font-family: nexonB;
+      src: url(webfonts/NexonLv2GothicBold.woff2) format("woff2");
+    }
+    @font-face {
+      font-family: nexonM;
+      src: url(webfonts/NexonLv2GothicMedium.woff2) format("woff2");
+    }
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    body > p{width: 80%; max-width: 1125px; margin: 0 auto; border-bottom: 1px solid #231f20;
+      padding: 50px 0 50px;}
+    body > p img{width: 180px;}
+    .list{width: 80%; max-width: 1125px; margin: 0 auto; display: flex; flex-direction: column;}
+    .list li{width: 100%; padding: 50px 0 50px; border-bottom: 1px solid #231f20; display: flex;
+      justify-content: space-between; cursor: pointer;}
+    .list li > p{position: relative; width: 80%;}
+    .list li > p:before{
+      content: "";
+      position: absolute;
+      display: inline-block;
+      top: 0;
+      right:-200px;
+      width: calc(3 / 1920* 100vw);
+      height: calc(14 / 1920* 100vw);
+      max-width: 3px;
+      max-height: 14px;
+      background-color: transparent;
+      border-bottom: min(0.885vw, 17px) solid #231f20;
+      transform: rotate(45deg);
+      }
+    .list li > p:after{
+      content: "";
+      position: absolute;
+      display: inline-block;
+      top: 0;
+      right: -180px;
+      width: calc(3 / 1920* 100vw);
+      height: calc(14 / 1920* 100vw);
+      max-width: 3px;
+      max-height: 14px;
+      background-color: transparent;
+      border-bottom: min(0.885vw, 17px) solid #231f20;
+      transform: rotate(-45deg);
+      }
+      .list li > p.on:before{
+        content: "";
+        position: absolute;
+        display: inline;
+        top: 0;
+        right: -600px;
+        width: calc(3 / 1920* 100vw);
+        height: calc(14 / 1920* 100vw);
+        max-width: 3px;
+        max-height: 14px;
+        background-color: transparent;
+        border-bottom: min(0.885vw, 17px) solid #231f20;
+        transform: rotate(90deg);
+      }
+      .list li > p.on:after{
+        content: "";
+        position: absolute;
+        display: inline;
+        top: 0;
+        right: -580px;
+        width: calc(3 / 1920* 100vw);
+        height: calc(14 / 1920* 100vw);
+        max-width: 3px;
+        max-height: 14px;
+        background-color: transparent;
+        border-bottom: min(0.885vw, 17px) solid #231f20;
+        transform: rotate(-90deg);
+      }
+    .list li img{width: 130px;}
+    .list li:hover img{filter: invert(70%) sepia(35%) saturate(1600%) hue-rotate(358deg) brightness(100%) contrast(110%);}
+    .list li img.on{filter: invert(70%) sepia(35%) saturate(1600%) hue-rotate(358deg) brightness(100%) contrast(110%);}
+    .list li .txt{width: 100%; display: none;}
+    .list li .txt.on{display: block;}
+    .list li .txt .txtBox{display: flex;}
+    .list li .txt strong{font-family: nexonB; font-size: 20px; margin-right: 15px; text-align: right;
+      width: 50px;}
+    .list li .txt .subTxt{padding-bottom: 20px;}
+    .list li .txt .subTxt h4{font-size: 20px; font-family: nexonL; font-weight: normal; margin-bottom: 10px;}
+    .list li .txt .subTxt p{font-size: 18px; font-family: nexonL; color: #626364; padding-left: 15px;}
+  </style>
+</head>
+<body>
+  <p><img src="images/history.png" alt="history"></p>
+  <ul class="list">
+    <li>
+      <p><img src="images/2023.png" alt="2023"><span></span></p>
+      <div class="txt">
+        <div class="txtBox">
+          <strong>3월</strong>
+          <div class="subTxt">
+            <h4>- 상품전시회 "딜리셔스 페스티벌" 개최</h4>
+            <p>*3/8(수) ~ 10(금), 서울 양재 AT센터</p>
+          </div>
+        </div>
+        <div class="txtBox">
+          <strong>8월</strong>
+          <div class="subTxt">
+            <h4>- 해외사업 진출 MOU</h4>
+            <p>*캄보디아</p>
+          </div>
+        </div>
+        <div class="txtBox">
+          <strong>9월</strong>
+          <div class="subTxt">
+            <h4>- 업계 최초 간편집밥 CAT.K 추진</h4>
+            <p>*신선반찬 플랫폼기업 '슈퍼키친' 콜라보</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <p><img src="images/2022.png" alt="2022"></p>
+      <div class="txt">
+        <div class="txtBox">
+          <strong>2월</strong>
+          <div class="subTxt">
+            <h4>- 싱가폴 MFA 체결</h4>
+            <p>*페이숑社</p>
+          </div>
+        </div>
+        <div class="txtBox">
+          <strong>3월</strong>
+          <div class="subTxt">
+            <h4>- 업계 최단기 6000호점 오픈</h4>
+            <p>*8년 소요(CU / GS25 21년 소요)</p>
+            <h4>- 新 제도 도입</h4>
+            <p>*H1(로열티, 본부임차) 타입 도입, 1호점 R문정대명점</p>
+          </div>
+        </div>
+        <div class="txtBox">
+          <strong>4월</strong>
+          <div class="subTxt">
+            <h4>- 콜라보 상품 개발</h4>
+            <p>*코오롱스포츠 콜라보 24종 등</p>
+          </div>
+        </div>
+        <div class="txtBox">
+          <strong>5월</strong>
+          <div class="subTxt">
+            <h4>- 스토어 컨셉 다양화</h4>
+            <p>*은행제휴 출점(KB 디지털뱅크, 분평동점), Bottle Shop(CVS +<br>
+              주류전문점 샵인샵, 강동ECT점) 등</p>
+          </div>
+        </div>
+        <div class="txtBox">
+          <strong>6월</strong>
+          <div class="subTxt">
+            <h4>- 상반기 흑자 전환 (+9억) </h4>
+          </div>
+        </div>
+        <div class="txtBox">
+          <strong>10월</strong>
+          <div class="subTxt">
+            <h4>- 이마트24 APP 리뉴얼 론칭 </h4>
+          </div>
+        </div>
+        <div class="txtBox">
+          <strong>12월</strong>
+          <div class="subTxt">
+            <h4>- 해외사업 확대</h4>
+            <p>*싱가폴 1, 2호점 오픈</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <p><img src="images/2021.png" alt="2021"></p>
+      <div class="txt">
+        <div class="txtBox">
+          <strong>1월</strong>
+          <div class="subTxt">
+            <h4>- 해외사업 TF 파견</h4>
+            <p>*말레이시아</p>
+          </div>
+        </div>
+        <div class="txtBox">
+          <strong>3월</strong>
+          <div class="subTxt">
+            <h4>- 배달서비스 리뉴얼 오픈</h4>
+            <p>*요기요 MOU</p>
+          </div>
+        </div>
+        <div class="txtBox">
+          <strong>4월</strong>
+          <div class="subTxt">
+            <h4>- 해외사업 진출 MOU</h4>
+            <p>*싱가폴</p>
+          </div>
+        </div>
+        <div class="txtBox">
+          <strong>6월</strong>
+          <div class="subTxt">
+            <h4>- 해외사업 1호점 오픈</h4>
+            <p>*말레이시아</p>
+          </div>
+        </div>
+        <div class="txtBox">
+          <strong>9월</strong>
+          <div class="subTxt">
+            <h4>- 완전무인점포 오픈</h4>
+            <p>*스마트코엑스</p>
+          </div>
+        </div>
+        <div class="txtBox">
+          <strong>10월</strong>
+          <div class="subTxt">
+            <h4>- 이마트24 WAY 수립</h4>
+            <p>*Identity 확립</p>
+            <h4>- 무인 주류판매 도입 확대</h4>
+            <p>*주류 무인판매 규제 샌드박스 허용</p>
+          </div>
+        </div>
+        <div class="txtBox">
+          <strong>12월</strong>
+          <div class="subTxt">
+            <h4>- 퀵커머스 사업 추진</h4>
+            <p>*BSD관악센터 오픈</p>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <script>
+    let btn = document.querySelectorAll(".list li");
+
+    btn.forEach(function(v,k){
+      v.onclick = function(){
+        btn[k].querySelector(".list li .txt").classList.toggle("on");
+        btn[k].querySelector(".list li img").classList.toggle("on");
+        btn[k].querySelector(".list li > p").classList.toggle("on");
+      }
+    });
+  </script>
+</body>
+</html>
