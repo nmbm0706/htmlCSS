@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #000;}
+    #wrap{width: 100%; display: flex; align-items: center; justify-content: right; flex: 1 1; 
+      margin: 0 auto;}
+    #wrap .left{width: 40%;}
+    #wrap .left h1{font-size: 54px; width: 650px; margin-bottom: 100px; padding-left: 100px;
+      box-sizing: border-box; font-weight: lighter; letter-spacing: -2px;}
+    #wrap .left .list{display: flex; flex-direction: column; gap: 100px;}
+    #wrap .left .list li{}
+    #wrap .left .list li a{display: flex; border-radius: 20px; position: relative; margin-left: 50px;
+      gap: 30px; align-items: center;}
+    #wrap .left .list li a:after{
+      content: "";
+      position: absolute;
+      width: 750px;
+      height: 171px;
+      background: transparent;
+      left: 0; 
+      top: 50%;
+      border-radius: 20px;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: 0.5s;
+    }
+    #wrap .left .list li a.on::after{
+      content: "";
+      position: absolute;
+      width: 750px;
+      height: 171px;
+      background: #bf1e2e;
+      left: 0; 
+      top: 50%;
+      border-radius: 20px;
+      transform: translateY(-50%);
+      box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.19);
+      opacity: 1;
+    }
+    #wrap .left .list li a p{transition: 0.5s;}
+    #wrap .left .list li a p.on{padding-left: 10px;}
+    #wrap .left .list li a p img{position: relative; z-index: 1; margin-left: 70px;}
+    #wrap .left .list li a p img.on{filter: brightness(100);}
+    #wrap .left .list li a .txt{position: relative;}
+    #wrap .left .list li a .txt h2{font-size: 28px; position: relative; z-index: 1; display: inline-block;
+      font-weight: normal;}
+    #wrap .left .list li a .txt h2.on{color: #fff;}
+    #wrap .left .list li a .txt h3{font-size: 18px; position: relative; z-index: 1; margin-top: 12px;
+      color: #939393; font-weight: normal;}
+    #wrap .left .list li a .txt h3.on{color: #fff;}
+    #wrap .left .list li a span{width: 60px; height: 60px; display: inline-block;
+      position: relative; z-index: 1; }
+    #wrap .left .list li a span.on:before{
+      content: "";
+      position: absolute;
+      background: #fff; 
+      background-image: url(images/arrow.svg);
+      z-index: 1;
+      left: 50%;
+      top: 50%;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      background-size: 24 24;
+      background-position: center;
+    }
+
+    #wrap .right{width: 50%; height: 100vh; background-image: url(images/list1bg.jpg); transition: 0.5s;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div class="left">
+      <h1>카노와 함께하는<br> 브랜드를 소개합니다.</h1>
+      <ul class="list">
+        <li>
+          <a href="#">
+            <p><img src="images/list1.png" alt="list1"></p>
+            <div class="txt">
+              <h2>이지스토리</h2>
+              <h3>산뜻한 일상의 이야기를 전하는 정직한 브랜드입니다.</h3>
+            </div>
+            <span></span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="images/list2.png" alt="list2"></p>
+            <div class="txt">
+              <h2>페슬러</h2>
+              <h3>반려동물과 함께하는 우리의 일상을 위한 브랜드입니다.</h3>
+            </div>
+            <span></span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="images/list3.png" alt="list3"></p>
+            <div class="txt">
+              <h2>홈케어</h2>
+              <h3>보다 나은 홈 라이프를 위한 방법을 만드는 브랜드입니다.</h3>
+            </div>
+            <span></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="right"></div>
+  </div>
+
+  <script>
+    let btn = document.querySelectorAll("#wrap .left .list li");
+    let bg = "url(images/list1bg.jpg)";
+    let ul = document.querySelectorAll("#wrap .list");
+
+
+    document.querySelector("#wrap .left .list li a").classList.add("on");
+    document.querySelector("#wrap .left .list li a .txt h2").classList.add("on");
+    document.querySelector("#wrap .left .list li a .txt h3").classList.add("on");
+    document.querySelector("#wrap .left .list li a p").classList.add("on");
+    document.querySelector("#wrap .left .list li a img").classList.add("on");
+   
+    function fnc(){
+      document.querySelector("#wrap .left .list li a").classList.remove("on");
+      document.querySelector("#wrap .left .list li a .txt h2").classList.remove("on");
+      document.querySelector("#wrap .left .list li a .txt h3").classList.remove("on");
+      document.querySelector("#wrap .left .list li a p").classList.remove("on");
+      document.querySelector("#wrap .left .list li a img").classList.remove("on");
+      document.querySelector("#wrap .left .list li a span").classList.remove("on");
+
+    }
+
+    function fnc2(){
+      document.querySelector("#wrap .left .list li a .txt h2").classList.add("on");
+      document.querySelector("#wrap .left .list li a .txt h3").classList.add("on");
+      document.querySelector("#wrap .left .list li a p").classList.add("on");
+      document.querySelector("#wrap .left .list li a img").classList.add("on");
+      document.querySelector("#wrap .left .list li a span").classList.add("on");
+      document.querySelector("#wrap .right").style.backgroundImage = "url(images/list1bg.jpg)"
+    }
+
+    
+    btn.forEach(function(v,k){
+      v.onmouseenter = function(){
+        fnc();
+        btn[k].querySelector("#wrap .left .list li a").classList.add("on");
+        btn[k].querySelector("#wrap .left .list li a .txt h2").classList.add("on");
+        btn[k].querySelector("#wrap .left .list li a .txt h3").classList.add("on");
+        btn[k].querySelector("#wrap .left .list li a p").classList.add("on");
+        btn[k].querySelector("#wrap .left .list li a img").classList.add("on");
+        btn[k].querySelector("#wrap .left .list li a span").classList.add("on");
+        document.querySelector("#wrap .right").style.backgroundImage = bg.replace(bg.substr(-8,1),k+1);
+      }
+
+      v.onmouseleave = function(){
+        btn[k].querySelector("#wrap .left .list li a").classList.remove("on");
+        btn[k].querySelector("#wrap .left .list li a .txt h2").classList.remove("on");
+        btn[k].querySelector("#wrap .left .list li a .txt h3").classList.remove("on");
+        btn[k].querySelector("#wrap .left .list li a p").classList.remove("on");
+        btn[k].querySelector("#wrap .left .list li a img").classList.remove("on");
+        btn[0].querySelector("#wrap .left .list li a").classList.add("on");
+        btn[k].querySelector("#wrap .left .list li a span").classList.remove("on");
+        fnc2();
+      }
+    });
+
+    
+  </script>
+</body>
+</html>
