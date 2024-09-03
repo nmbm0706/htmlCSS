@@ -68,9 +68,23 @@
       }    
     }
 
-    setInterval(function(){
+    let interval = setInterval(function(){
       document.querySelector(".box").style.transform = "rotateY("+(y+=90)+"deg)";
     }, 1000);
+
+    let btn = document.querySelectorAll("button");
+    
+    btn.forEach(function(v,k){
+      v.onmouseenter = function(){
+        clearInterval(interval); //clearInterval << setInterval을 멈추는 것
+      }
+
+      v.onmouseleave = function(){
+        interval = setInterval(function(){
+          document.querySelector(".box").style.transform = "rotateY("+(y+=90)+"deg)";
+        }, 1000);
+      }
+    });
   </script>
 </body>
 </html
