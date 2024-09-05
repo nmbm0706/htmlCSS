@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    *{margin: 0; padding: 0;}
+    #wrap{width: 100%;}
+    #wrap > p{position: absolute;}
+    #wrap > p img{width: 100%; height: 100vh;}
+    #wrap .txt{width: 1300px; position: absolute; color: #fff; top: 30%; left: 15%;}
+    #wrap .txt h1{font-size: 65px; margin-bottom: 20px;}
+    #wrap .txt p{font-size: 28px;}
+
+    .autoplay-progress img{width: 10px; height: 12px; cursor: pointer; position: relative; z-index: 11;}
+    .autoplay-progress img.on{content: url(images/visual-icon-play.png);}
+
+    .autoplay-progress {
+      position: absolute;
+      bottom: 30%;
+      left: 15%;
+      z-index: 10;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      
+    }
+    .autoplay-progress::before{
+      content: "";
+      position: absolute;
+      border: 4.5px solid rgba(255, 255, 255, .5);
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+    }
+
+    .autoplay-progress svg {
+      --progress: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      stroke-width: 3px;
+      stroke: #fff;
+      fill: none;
+      stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+      stroke-dasharray: 125.6;
+      transform: rotate(-90deg);
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div class="swiper-wrapper">
+    <p class="swiper-slide"><img src="images/visual-slide-1.jpg" alt="slide1"></p>
+    <p class="swiper-slide"><img src="images/visual-slide-2.jpg" alt="slide2"></p>
+    <p class="swiper-slide"><img src="images/visual-slide-3.jpg" alt="slide3"></p>
+    <p class="swiper-slide"><img src="images/visual-slide-4.jpg" alt="slide4"></p>
+    <p class="swiper-slide"><img src="images/visual-slide-5.jpg" alt="slide5"></p>
+    <div class="txt">
+      <h1>Company caring<br>
+        for better Earth</h1>
+        <p>코웨이가 더 나은 지구를 만들어 나가겠습니다.</p>
+      </div>
+      <div class="autoplay-progress">
+        <img src="images/visual-icon-pause.png" alt="pause">
+        <svg viewBox="0 0 48 48">
+          <circle cx="24" cy="24" r="20" ></circle>
+        </svg>
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    const progressCircle = document.querySelector(".autoplay-progress svg");
+    const progressContent = document.querySelector(".autoplay-progress span");
+    var swiper = new Swiper("#wrap", {
+      spaceBetween: 30,
+      effect: "fade",
+      centeredSlides: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      // navigation: {
+      //   nextEl: ".swiper-button-next",
+      //   prevEl: ".swiper-button-prev"
+      // },
+      on: {
+        autoplayTimeLeft(s, time, progress) {
+          progressCircle.style.setProperty("--progress", 1 - progress);
+        }
+      }
+    });
+
+    let play = document.querySelector(".autoplay-progress img");
+
+    var stop = swiper.autoplay.stop();
+    var start = swiper.autoplay.start();
+
+    var stop = true;
+    var start = false;
+
+    
+
+    play.onclick = function(){
+      if(stop){
+
+      }
+    }
+  </script>
+</body>
+</html>
