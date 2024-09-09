@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+  <style>
+    p{color: blue; font-size: 100px; }
+  </style>
+  <script>
+    // $(document).ready(function(){})
+    $(function(){
+      // $("#demo").html('<h1>제이쿼리</h1>');
+      // $("p").css("color","red").css("fontSize", "32px");
+      // 한 단어 그리고 2개의 단어인 속성은 꼭 따옴표로 묶기
+      // 속성값은 따옴표 필수
+      $("p").css({color: "red", "font-size"/*fontSize*/: "32px"});
+      // 한 단어의 속성 이름은 따옴표 없어도 됨 2개의 단어인 속성만 따옴표가 필요
+    });
+      
+  </script>
+<body>
+  <p id="demo">jQuery</p>
+  <p>하나</p>
+  <p>둘</p>
+  <p>셋</p>
+  <p>넷</p>
+
+  <script>
+  </script>
+</body>
+</html>
