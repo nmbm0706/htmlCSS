@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p{width: 30px; height: 30px; border-radius: 50%; background: #ccc; position: relative;}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script>
+    $(function(){
+      $(document).keydown(function(e){
+      // $(document).keyup(function(e){
+      // $(document).keypress(function(e){
+        console.log(e.keyCode);
+        if(e.keyCode == 39){
+          $("p").css("left", "+=10px"); //오른쪽 방향키
+        } else if(e.keyCode == 37){
+          $("p").css("left", "-=10px") //왼쪽 방향키
+        } else if(e.keyCode == 38){
+          $("p").css("top", "-=10px") //위쪽 방향키
+        } else if(e.keyCode == 40){
+          $("p").css("top", "+=10px") //아래쪽 방향키
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <p></p>
+</body>
+</html>
