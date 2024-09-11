@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <title>iM캐피탈</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    @font-face {
+      font-family: koho;
+      src: url(webfonts/koho-700.woff) format("woff");
+    }
+    @font-face {
+      font-family: Prebold;
+      src: url(webfonts/Pretendard-Bold.woff) format("woff");
+    }
+    @font-face {
+      font-family: Presemibold;
+      src: url(webfonts/Pretendard-SemiBold.woff) format("woff");
+    }
+    *{margin: 0; padding: 0;}
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #fff;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+    }
+
+    .swiper {
+      width: 100%;
+      max-width: 1700px;
+      height: 700px;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .swiper-slide .txt{display: flex; flex-direction: column; text-align: left;}
+    .swiper-slide .txt h1{font-size: 80px; font-family: koho; padding-bottom: 16px; text-transform: uppercase; color: #222426; letter-spacing: -3px;}
+    .swiper-slide .txt h2{font-size: 40px; color: #222426; margin-top: 18px; font-family: Prebold; height: 65px;}
+    .swiper-slide .txt h3{font-family: Presemibold; color: #222426; margin-top: 8px; padding-bottom: 16px; height: 55px;}
+
+    .swiper-slide img {
+      display: block;
+      height: 700px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="txt">
+          <h1>credit loan</h1>
+          <h2>개인신용대출</h2>
+          <h3>똑똑하고 친절한 개인금융</h3>
+        </div>
+        <p><img src="images/main_obj_01.png" alt="obj_01"></p>
+      </div>
+      <div class="swiper-slide">
+        <div class="txt">
+          <h1>auto finance</h1>
+          <h2>자동차 금융</h2>
+          <h3>빠르고 편리한 자동차금융</h3>
+        </div>
+        <p><img src="images/main_obj_02.png" alt="obj_02"></p>
+      </div>
+      <div class="swiper-slide">
+        <div class="txt">
+          <h1>secured loan</h1>
+          <h2>담보대출</h2>
+          <h3>똑똑하고 친절한 개인금융</h3>
+        </div>
+        <p><img src="images/main_obj_03.png" alt="obj_03"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
+</body>
+
+</html>

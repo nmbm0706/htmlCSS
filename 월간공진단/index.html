@@ -41,6 +41,9 @@
       opacity: 1;
       transform: translateY(-10px);
     }
+    header .menu{width: 38px; display: flex; flex-direction: column; position: absolute; right: 20px; top: 43%; cursor: pointer;}
+    header .menu span{display: block; width: 100%; height: 2px; background: #fff; z-index: 999; color: #fff; margin-bottom: 10px;}
+    header .menu span:last-child{margin-bottom: 0;}
 
     .main{display: flex;}
 
@@ -153,6 +156,11 @@
         <a href="#">연희살롱</a>
       </li>
     </ul>
+    <div class="menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
   <div class="main">
     <div class="left">
