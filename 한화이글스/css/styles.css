@@ -6,29 +6,30 @@
 }
 @font-face {
   font-family: hanwhaR;
-  src: url(webfonts/HanwhaR.woff2) format("woff2");
+  src: url(../webfonts/HanwhaR.woff2) format("woff2");
 }
 @font-face {
   font-family: myriadR;
-  src: url(webfonts/MyriadPro-Regular.woff2) format("woff2");
+  src: url(../webfonts/MyriadPro-Regular.woff2) format("woff2");
 }
 @font-face {
   font-family: myriadB;
-  src: url(webfonts/MyriadPro-Bold.woff2);
+  src: url(../webfonts/MyriadPro-Bold.woff2) format("woff2");
 }
 @font-face {
   font-family: hanwhagothicEL;
-  src: url(webfonts/HanwhaGothicEL.woff2) format("woff2");
+  src: url(../webfonts/HanwhaGothicEL.woff2) format("woff2");
 }
 @font-face {
   font-family: hanwhagothicT;
-  src: url(webfonts/HanwhaGothicT.woff2) format("woff2");
+  src: url(../webfonts/HanwhaGothicT.woff2) format("woff2");
 }
 @font-face {
   font-family: hanwhaL;
-  src: url(webfonts/HanwhaL.woff2);
+  src: url(../webfonts/HanwhaL.woff2) format("woff2");
 }
 *{margin: 0; padding: 0;}
+body{overflow-x: hidden;}
 ul{list-style: none;}
 a{text-decoration: none;}
 #wrap{width: 100%; max-width: 1913px; height: 5057px; position: relative; background: #000; margin: 0 auto; padding-bottom: 300px;}
@@ -95,11 +96,11 @@ a{text-decoration: none;}
 #wrap .main{position: absolute; top: -30px; height: 100%;}
 #wrap .main video{width: 100%; position: relative;}
 
-#wrap .main .mySwiper{position: relative; width: 1240px; height: 440px; margin: -175px auto 0; padding-top: 60px;}
+#wrap .main .mySwiper{position: relative; width: 1240px; height: 440px; margin: -175px auto 0; padding-top: 60px; overflow: visible;}
 #wrap .main .mySwiper > p{color: #fff; padding-top: 60px; animation: tongtong 0.5s ease-in infinite alternate;}
 #wrap .main .mySwiper ul{width: 1240px; height: 440px; display: flex; position: relative; left: 10%;}
 
-#wrap .main .mySwiper ul li{width: 80%; height: 440px; text-align: center; background: rgba(20, 20, 20, 0.9); border-radius: 10px; position: relative;}
+#wrap .main .mySwiper ul li{height: 440px; text-align: center; background: rgba(20, 20, 20, 0.9); border-radius: 10px; position: relative;}
 #wrap .main .mySwiper ul li:first-child{animation: tongtong 0.5s ease-in infinite alternate;}
 #wrap .main .mySwiper ul li:first-child:before{
   content: "";
@@ -361,7 +362,7 @@ footer .right .txt p:nth-child(2):after{
   position: absolute;
   top: -5px;
   right: 0;
-  background: url(images/add_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg);
+  background: url(../images/add_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg);
   width: 20px;
   height: 20px;
   transform-origin: center;
@@ -374,7 +375,7 @@ footer .right .txt p:nth-child(2).on::after{
   right: 0;
   width: 20px;
   height: 20px;
-  background-image: url(images/add_24dp_F37321_FILL0_wght400_GRAD0_opsz24.svg);
+  background-image: url(../images/add_24dp_F37321_FILL0_wght400_GRAD0_opsz24.svg);
   transform: rotate(45deg);
 }
 
