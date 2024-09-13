@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/jquery.fullPage.css">
   <link rel="stylesheet" href="js/jquery.fullPage.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
@@ -102,19 +104,50 @@
       </div>
     </div>
   </div>
-  <div class="con">
-    <div class="con1">
-      <div class="pic">
-        <img src="images/section01-01.jpg" alt="section01-01">
-        <img src="images/section01-02.jpg" alt="section01-02">
-        <img src="images/section01-03.jpg" alt="section01-03">
+  <div class="con swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="sub swiper-slide">
+        <div class="inner">
+          <div class="pic">
+            <img src="images/section01-01.jpg" alt="section01-01">
+            <img src="images/section01-02.jpg" alt="section01-02">
+            <img src="images/section01-03.jpg" alt="section01-03">
+          </div>
+          <div class="brand">
+            <img src="images/logo-elle.svg" alt="elle">
+            <p>엘르는 전 세계 45개국의 2,100만 독자와 함께하는<br>세계 최대 네트워크를 자랑하는 NO.1 패션 미디어입니다.</p>
+            <span>view more</span>
+          </div>
+        </div>
       </div>
-      <div class="brand">
-        <img src="images/logo-elle.svg" alt="elle">
-        <p>엘르는 전 세계 45개국의 2,100만 독자와 함께하는<br>세계 최대 네트워크를 자랑하는 NO.1 패션 미디어입니다.</p>
-        <span>view more</span>
+      <div class="sub swiper-slide">
+        <div class="inner">
+          <div class="pic">
+            <img src="images/section02-01.jpg" alt="section02-01">
+            <img src="images/section02-02.jpg" alt="section02-02">
+          </div>
+          <div class="brand">
+            <img src="images/logo-cosmopolitan.svg" alt="elle">
+            <p>코스모폴리탄은 전 세계 22개국에 에디션을 발간하며
+              <br>글로벌 라이프스타일을 주도하는 미디어 입니다.</p>
+            <span>view more</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <!-- <script>
+    var swiper = new Swiper(".mySwiper", {
+      direction: "vertical",
+      slidesPerView: 1,
+      spaceBetween: 30,
+      mousewheel: false,
+    });
+  </script> -->
 </body>
 </html>
