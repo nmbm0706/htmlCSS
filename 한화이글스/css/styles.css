@@ -2,7 +2,7 @@
 
 @keyframes tongtong {
   0%{transform: translateY(-24px);}
-  100%{transform: translateY(0);;}
+  100%{transform: translateY(5px);;}
 }
 @font-face {
   font-family: hanwhaR;
@@ -32,7 +32,7 @@
 body{overflow-x: hidden;}
 ul{list-style: none;}
 a{text-decoration: none;}
-#wrap{width: 100%; max-width: 1913px; height: 5057px; position: relative; background: #000; margin: 0 auto; padding-bottom: 300px;}
+#wrap{width: 100%; max-width: 1913px; height: auto; position: relative; background: #000; margin: 0 auto; padding-bottom: 300px;}
 #wrap header{width: 100%; height: 110px; display: flex; position: relative; background: #000;
   border-bottom: 1px solid #333; z-index: 1;}
 #wrap header .logo{text-align: center; line-height: 100px; padding-left: 60px;}
@@ -62,8 +62,7 @@ a{text-decoration: none;}
   left: -20px;}
 #wrap header > ul > li:hover ul.sub{height: 50px;}
 
-#wrap header > ul > li ul.sub li a{padding: 0 20px; height: 50px; color: #fff; font-size: 16px;
-  font-family: hanwhagothicEL;}
+#wrap header > ul > li ul.sub li a{padding: 0 20px; height: 50px; color: #fff; font-size: 16px; font-family: hanwhagothicEL; display: inline-block;}
 #wrap header > ul > li ul.sub li:hover a{color: #f37321;}
 
 
@@ -94,7 +93,7 @@ a{text-decoration: none;}
 #wrap .snsIcon p:hover{border: 3px solid #f37321;}
 
 #wrap .main{position: absolute; top: -30px; height: 100%;}
-#wrap .main video{width: 100%; position: relative;}
+#wrap .main video{width: 1920px; height: 1080px; position: relative; object-fit: contain;}
 
 #wrap .main .mySwiper{position: relative; width: 1240px; height: 440px; margin: -175px auto 0; padding-top: 60px; overflow: visible;}
 #wrap .main .mySwiper > p{color: #fff; padding-top: 60px; animation: tongtong 0.5s ease-in infinite alternate;}
@@ -383,7 +382,7 @@ footer .right > h3{color: #888; font-size: 16px; font-family: myriodR; font-weig
 footer .right > h3 span{font-size: 14px; font-family: hanwhaR;}
 
 footer .right #list{overflow: hidden; height: 0; z-index: 1; top: 0; left: 0;
-  position: absolute; width: 100%; transition: 1s;}
+  position: absolute; width: 100%; transition: 0.8s;}
 footer .right #list.on{top: -540px; height: 540px;}
 footer .right #list > ul{display: flex; background: #111; width: 100%;
   position: absolute; justify-content: center;

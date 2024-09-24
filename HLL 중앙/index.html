@@ -12,14 +12,14 @@
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="fullPage.js-2.9.7/jquery.fullPage.js"></script>
-  <script src="fullPage.js-2.9.7/examples/examples.css"></script>
+  <link rel="fullPage.js-2.9.7/examples/examples.css">
   <script>
-    $(function(){
-      $(".fullpage").fullpage({
-				verticalCentered: true,
-        scrollingSpeed: 800,
-			});
-    });
+    // $(function(){
+    //   $(".fullpage").fullpage({
+		// 		verticalCentered: true,
+    //     scrollingSpeed: 800,
+		// 	});
+    // });
     
   </script>
 </head>
@@ -67,7 +67,9 @@
     </div>
   </header>
   <div class="main">
-    <video src="https://www.hll.kr/resources/videos/main/bazaar_video.mp4" autoplay loop muted></video>
+    <video autoplay loop muted>
+      <source src="https://www.hll.kr/resources/videos/main/bazaar_video.mp4" type="video/mp4">
+    </video>
       <div class="txt1 section">
         <div class="txtSub">
           <svg width="415" height="61" viewBox="0 0 415 61" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -115,7 +117,7 @@
       </div>
   </div>
   <div class="con swiper mySwiper fullpage">
-    <div class="swiper-wrapper">
+    <div class="wrap">
       <div class="sub swiper-slide section">
         <div class="inner">
           <div class="pic">
@@ -252,37 +254,37 @@
           </div>
         </div>
       </div>
+      <footer class="section">
+        <div class="footTop">
+          <ul class="list">
+            <li>이용약관</li>
+            <li>개인정보처리방침</li>
+            <li>이메일무단수집금지</li>
+            <li>윤리경영</li>
+            <li>CONTACT US</li>
+            <li>RSS</li>
+          </ul>
+        </div>
+        <div class="footCenter">
+          <div class="logo">
+            <img src="images/logo_hll.svg" alt="hll">
+          </div>
+          <div class="txt">
+            <h1>에이치엘엘중앙(주)</h1>
+            <span>서울시 강남구 도산대로 156(논현동)</span>
+            <span>대표자 : 강주연</span>
+            <br>
+            <span>사업자등록번호 : 887-86-02919</span>
+            <span>통신판매업신고 : 제 2022-서울강남-04005호</span>
+            <p>© 2024 HLL. All Rights Reserved.</p>
+          </div>
+        </div>
+        <div class="footLast">
+          <p>Family Site<span></span></p>
+        </div>
+      </footer>
     </div>
   </div>
-  <footer>
-    <div class="footTop">
-      <ul class="list">
-        <li>이용약관</li>
-        <li>개인정보처리방침</li>
-        <li>이메일무단수집금지</li>
-        <li>윤리경영</li>
-        <li>CONTACT US</li>
-        <li>RSS</li>
-      </ul>
-    </div>
-    <div class="footCenter">
-      <div class="logo">
-        <img src="images/logo_hll.svg" alt="hll">
-      </div>
-      <div class="txt">
-        <h1>에이치엘엘중앙(주)</h1>
-        <span>서울시 강남구 도산대로 156(논현동)</span>
-        <span>대표자 : 강주연</span>
-        <br>
-        <span>사업자등록번호 : 887-86-02919</span>
-        <span>통신판매업신고 : 제 2022-서울강남-04005호</span>
-        <p>© 2024 HLL. All Rights Reserved.</p>
-      </div>
-    </div>
-    <div class="footLast">
-      <p>Family Site<span></span></p>
-    </div>
-  </footer>
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
