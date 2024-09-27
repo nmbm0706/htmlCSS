@@ -58,6 +58,14 @@
           $(".desc li .people").removeClass("on");
           $(".desc li").eq(i).find(".people").addClass("on");
         });
+        let num = 1;
+        setTimeout(function(){
+          $(".desc li").eq(0).trigger("click");
+        });
+        setInterval(function(){
+          $(".desc li").eq(num).trigger("click");
+          num = (num + 1) % $(".desc li").length;
+        }, 2000);
       });
     </script>
   </head>
